@@ -1,0 +1,56 @@
+footer {
+  background-color: $theme-blue;
+  padding: 35px 0;
+  color: white;
+
+  .footer-bottonm {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #menu-footer {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-inline-start: 0;
+
+    li {
+      padding-right: 10px;
+
+      a {
+        color: white;
+      }
+
+      a:hover {
+        color: $theme-orange;
+      }
+    }
+
+    li::after {
+      content: " | ";
+      padding-left: 10px;
+    }
+
+    li:last-child::after {
+      display: none;
+    }
+  }
+}
+// socket area
+.socked-area {
+  background-color: $theme-blue-dark;
+  padding: 10px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+    color: #898c9b;
+    margin: 10px 0;
+  }
+}
