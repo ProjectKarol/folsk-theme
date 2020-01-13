@@ -1,0 +1,124 @@
+.page-template-tworcy {
+  .page-header {
+    display: none;
+  }
+  h1 {
+    padding: 30px 0;
+    text-align: center;
+  }
+  h2 {
+    color: $theme-orange;
+    text-align: center;
+    font-weight: 800;
+    padding: 20px 0 0 0;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .tworc-page {
+    background: url('../images/dolacz-tlo.jpg') no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+
+    .image-conteanier {
+      width: 100%;
+      border: solid 5px white;
+      border-radius: 20px;
+      box-shadow: 1px 2px 15px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      &:before {
+        content: '';
+        float: left;
+        padding-top: 100%; /* initial ratio of 1:1*/
+      }
+    }
+
+    &:hover {
+      border: $theme-orange;
+    }
+  }
+
+  .col-sm-4 {
+    &:hover {
+      cursor: pointer;
+      .image-conteanier {
+        width: 100%;
+        border: solid 5px $theme-orange;
+        border-radius: 20px;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .category-box {
+    background-color: $theme-orange;
+    padding: 0 10px;
+    margin: 0 3px 10px 3px;
+    height: 100px;
+    color: white;
+    text-align: center;
+
+    .box-item {
+      padding: 20px;
+      margin: 13px;
+      mask-size: cover;
+      background-color: white;
+      height: 30px;
+    }
+  }
+  .podróże {
+    mask-image: url('../images/svg/suitcase.svg');
+  }
+  .moda {
+    mask-image: url('../images/svg/high-heels.svg');
+  }
+  .zwierzęta {
+    mask-image: url('../images/svg/pawprint.svg');
+  }
+  .kuchnia {
+    mask-image: url('../images/svg/pan.svg');
+  }
+  .sport {
+    mask-image: url('../images/svg/basketball-ball-variant.svg');
+  }
+  .kultura {
+    mask-image: url('../images/svg/open-magazine.svg');
+  }
+  .sztuka {
+    mask-image: url('../images/svg/column.svg');
+  }
+  .ekologia {
+    mask-image: url('../images/svg/leaf.svg');
+  }
+  .ogród {
+    mask-image: url('../images/svg/plant.svg');
+  }
+  .technologia {
+    mask-image: url('../images/svg/monitor.svg');
+  }
+  .rozrywka {
+    mask-image: url('../images/svg/game-controller.svg');
+  }
+  .lifestyle {
+    mask-image: url('../images/svg/martini.svg');
+  }
+  .motoryzacja {
+    mask-image: url('../images/svg/car.svg');
+  }
+  .uroda {
+    mask-image: url('../images/svg/lipstick.svg');
+  }
+  .rozwój {
+    mask-image: url('../images/svg/goal.svg');
+  }
+}

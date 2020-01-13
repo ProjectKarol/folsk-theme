@@ -1,7 +1,7 @@
-@import "common/variables";
+@import 'common/variables';
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+@import './autoload/**/*';
 
 /**
  * Import npm dependencies
@@ -12,17 +12,23 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
-@import "common/global";
-@import "components/buttons";
-@import "components/flickity-carousel";
-@import "components/social-icons";
-@import "components/comments";
-@import "components/forms";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
-@import "pages/home.scss";
+@import 'common/global';
+@import 'components/buttons';
+@import 'components/flickity-carousel';
+@import 'components/social-icons';
+@import 'components/comments';
+@import 'components/forms';
+@import 'components/wp-classes';
+@import 'layouts/header';
+@import 'layouts/sidebar';
+@import 'layouts/footer';
+@import 'layouts/pages';
+@import 'layouts/posts';
+@import 'layouts/tinymce';
+@import 'pages/home.scss';
+@import 'pages/dolacz.scss';
+@import 'pages/jak-dzialamy.scss';
+@import 'pages/onas.scss';
+@import 'pages//tworcy.scss';
+@import 'pages//author.scss';
+@import 'pages//kontakt.scss';

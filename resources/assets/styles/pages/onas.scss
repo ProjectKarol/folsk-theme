@@ -1,0 +1,18 @@
+.page-template-o-nas {
+  .page-header {
+    display: none;
+  }
+  .o-nas-page {
+    background: url('../images/o-nas-tlo.jpg') no-repeat center center;
+    background-size: cover;
+    background-clip: border-box;
+    padding: 100px 0;
+  }
+
+  h1 {
+    padding: 20px 0;
+    font-weight: 800;
+    font-size: 3rem;
+    color: $theme-dark;
+  }
+}

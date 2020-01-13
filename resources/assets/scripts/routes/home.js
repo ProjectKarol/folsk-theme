@@ -2,6 +2,7 @@ import Flickity from 'flickity';
 export default {
   init() {
     // JavaScript to be fired on the home page
+
     var elem = document.querySelector('.main-carousel');
     new Flickity(elem, {
       // options

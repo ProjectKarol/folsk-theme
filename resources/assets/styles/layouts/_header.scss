@@ -10,6 +10,20 @@
   position: fixed;
   width: 100%;
   padding: 10px 0;
+  background: white;
+  z-index: 999;
+
+  .current_page_item {
+    border-bottom: solid $theme-orange;
+  }
+  .nav a {
+    color: black;
+  }
+  .nav a:focus,
+  .nav a:hover {
+    color: $theme-orange;
+    background-color: #ebebeb !important;
+  }
 
   .container {
     display: flex;
@@ -26,4 +40,9 @@
       padding: 1px;
     }
   }
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
 }

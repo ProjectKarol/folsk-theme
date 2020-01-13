@@ -20,6 +20,11 @@ add_action('wp_enqueue_scripts', function () {
 }, 100);
 
 /**
+ * Add image size
+ */
+add_image_size( "carouser_image", 300, 300, false );
+
+/**
  * Theme setup
  */
 add_action('after_setup_theme', function () {

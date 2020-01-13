@@ -9,11 +9,13 @@
 @section('content')
 <div class="home-header" >
   <div class="container">
+    <div class="col-md-6">
     <h1>CREATORS</h1>
     <H2>that influence</H2>
     <p>Folks to nowa agencja influenceru marketingu na polskim rynku.
       Nasze działania są skierowane do twórców – zarówno marko i mikroinfluencerów, jak i do klientów poszukujących nowego źródła komunikacji.
       </p>
+    </div>
   </div>
 </div>
 
@@ -51,37 +53,99 @@
 
 </div>
 <div class="tworcy">
-@php
+<div class="container">
+
+  <h1>Twórcy</h1>
+  @php
 // WP_Query arguments
 $args = array(
-  'post_type' => 'tworcy',
-);
+            'role'           => 'Author',
+            'orderby'        => 'post_count',
+          );
 
 // The Query
-$query = new WP_Query( $args );
+$user_query = new WP_User_Query( $args );
 // The Loop
 @endphp
 
-@if ( $query->have_posts() )
+@if ( ! empty( $user_query->results )  )
 <div class="gallery main-carousel">
-	@while ( $query->have_posts() )
-   @php $query->the_post(); @endphp
+  @foreach ( $user_query->results as $user )
 
-   <div class="gallery-cell">{{the_title()}}</div>
+  @foreach ( get_user_meta( $user -> ID , 'slim_image_gf' ) as $userAvatar )
+<div class="gallery-cell" style="background-image: url('{{$userAvatar}}'); background-size: cover;">
+  @endforeach
 
 
+  @foreach ( get_user_meta( $user -> ID , 'kategorie_tworczosci_gf' ) as $kategoria )
+  @php $kategoriearray = explode( ',', $kategoria ) @endphp
+  <div class="icons-talens">
+@foreach ($kategoriearray as $categoryitem)
+    {{-- {{vdump($categoryitem )}} --}}
+    <div class="category-box">
+      <div class="box-item {{$categoryitem}}">
 
-  @endwhile
+      </div>
+      {{$categoryitem}}
+  </div>
+@endforeach
 </div>
- @else
-   <p>nie znaleziono twóców</p>
+@endforeach
+
+
+
+  <h2>{{$user -> data -> user_nicename}}  </h2><p>Influencer</p>
+</div>
+
+
+
+
+@endforeach
+</div>
+@else
+<p>nie znaleziono twóców</p>
 @endif
 
 @php
 // Restore original Post Data
 wp_reset_postdata();
 @endphp
+<div class="text-center">
 
+  <a class="btn-effect center" href="/tworcy/" target="_blank" rel="nofollow noopener">Zobacz wszystkich</a>
+</div>
+</div>
+</div>
+
+<div class="home-info-boxes">
+  <div class="container">
+    <div class="row">
+      <div class="info-box col-md-6">
+        <div class="info-header">
+        <img
+        src=" {{get_stylesheet_directory_uri()}}/assets/images/icon-planet-women.jpg"
+        alt="Jeseś twórcą"/>
+         <h2> <span class="theme-blue">Jesteś </span> <br> <span class="theme-orange-color">twórcą ?</span> </h2>
+
+        </div>
+      <p>Zapraszamy do współpracy wszystkich twórców internetowych, którzy poprzez działanie w mediach społecznościowych tworzą ciekawe i angażujące treści i chcą to wykorzystać przy współpracach marketingowych.
+        Dołącz do naszej agencji klikając w przycisk poniżej.
+      </p>
+      <a class="btn-effect center" href="/dolacz/" target="_blank" rel="nofollow noopener">Dołącz do twórców</a>
+      </div>
+      <div class="info-box col-md-6">
+        <div class="info-header">
+          <img
+          src=" {{get_stylesheet_directory_uri()}}/assets/images/icon-planet-women.jpg"
+          alt="Jeseś twórcą"/>
+        <h2><span class="theme-blue">Jesteś marką,</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
+        </div>
+        <p>Lorem ipsum lor Lorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lor</p>
+      <a class="btn-effect center" href="/dolacz/#regise" target="_blank" rel="nofollow noopener">Rozpocznij współpracę</a>
+    </div>
+    </div>
+  </div>
+</div>
 </div>
 
 

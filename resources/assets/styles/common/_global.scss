@@ -1,5 +1,6 @@
 $theme-blue: #2b304e;
 $theme-blue-dark: #232941;
+$theme-dark: #394f72;
 $theme-orange: #ff6251;
 $theme-background: #f7f7f7;
 
@@ -9,4 +10,83 @@ p {
 
 a:hover {
   color: $theme-orange;
+}
+
+.theme-orange-color {
+  color: $theme-orange;
+}
+
+.theme-blue {
+  color: $theme-blue;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.category-area {
+  display: flex;
+}
+
+.category-box {
+  background-color: $theme-orange;
+  padding: 0 10px;
+  margin: 0 3px 10px 3px;
+  height: 100px;
+  color: white;
+  text-align: center;
+
+  .box-item {
+    padding: 20px;
+    margin: 13px;
+    mask-size: cover;
+    background-color: white;
+    height: 30px;
+  }
+}
+
+.podróże {
+  mask-image: url('../images/svg/suitcase.svg');
+}
+.moda {
+  mask-image: url('../images/svg/high-heels.svg');
+}
+.zwierzęta {
+  mask-image: url('../images/svg/pawprint.svg');
+}
+.kuchnia {
+  mask-image: url('../images/svg/pan.svg');
+}
+.sport {
+  mask-image: url('../images/svg/basketball-ball-variant.svg');
+}
+.kultura {
+  mask-image: url('../images/svg/open-magazine.svg');
+}
+.sztuka {
+  mask-image: url('../images/svg/column.svg');
+}
+.ekologia {
+  mask-image: url('../images/svg/leaf.svg');
+}
+.ogród {
+  mask-image: url('../images/svg/plant.svg');
+}
+.technologia {
+  mask-image: url('../images/svg/monitor.svg');
+}
+.rozrywka {
+  mask-image: url('../images/svg/game-controller.svg');
+}
+.lifestyle {
+  mask-image: url('../images/svg/martini.svg');
+}
+.motoryzacja {
+  mask-image: url('../images/svg/car.svg');
+}
+.uroda {
+  mask-image: url('../images/svg/lipstick.svg');
+}
+.rozwój {
+  mask-image: url('../images/svg/goal.svg');
 }

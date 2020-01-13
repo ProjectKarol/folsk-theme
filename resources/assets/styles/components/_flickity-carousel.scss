@@ -1,23 +1,51 @@
 .gallery {
-  background: #eee;
+  background: transparent;
+  padding: 0 4px;
 }
 
 .gallery-cell {
-  width: 33.33%;
-  height: 200px;
-  margin-right: 10px;
+  width: 49%;
+  height: 250px;
+  margin: 0 3px;
   background: #8c8;
   counter-increment: gallery-cell;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 /* cell number */
-.gallery-cell::before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+// .gallery-cell::before {
+//   display: block;
+//   text-align: center;
+//   content: counter(gallery-cell);
+//   line-height: 300px;
+//   font-size: 80px;
+//   color: white;
+// }
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  // code hehe
+
+  .gallery-cell {
+    width: 33%;
+    height: 300px;
+    margin: 0 3px;
+    background: #8c8;
+    counter-increment: gallery-cell;
+    margin-bottom: 90px;
+    padding-bottom: 90px;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: -50px;
+    display: block !important;
+  }
+
+  .flickity-prev-next-button.next {
+    right: -50px;
+    display: block !important;
+  }
 }
 
 // script
@@ -104,11 +132,11 @@ https://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button.previous {
-  left: 10px;
+  display: none;
 }
 
 .flickity-prev-next-button.next {
-  right: 10px;
+  display: none;
 }
 
 .flickity-rtl .flickity-prev-next-button.previous {

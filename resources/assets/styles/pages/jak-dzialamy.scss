@@ -1,0 +1,61 @@
+.page-template-jak-dzialamy {
+  .page-header {
+    display: none;
+  }
+
+  .image-corner {
+    margin-top: 100px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    width: 50%;
+  }
+
+  .jak-dzialamy-intro {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  h1 {
+    padding: 20px 0;
+    font-weight: 800;
+    font-size: 3rem;
+    color: $theme-dark;
+  }
+
+  h2 {
+    color: $theme-dark;
+    font-size: 2rem;
+    padding: 50px 0 20px 0;
+  }
+
+  .jak-dzialamy-page {
+    background: url('../images/jak-dzialamy-background.jpg') no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    padding: 100px 0;
+  }
+  span {
+    color: $theme-orange;
+  }
+
+  .etapy-wspolpracy {
+    background-color: white;
+    border-radius: 25px;
+    padding: 60px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+
+    h3 {
+      padding: 15px 0;
+    }
+
+    .col-sm-4 img {
+      height: 330px;
+    }
+  }
+
+  .btn-effect {
+    margin: 0 auto;
+  }
+}

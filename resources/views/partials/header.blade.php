@@ -10,7 +10,13 @@
             width="auto" />
           </div>
         @else
-        <div class="home">not home</div>
+        <div class="home">
+          <img
+            src="@php echo get_stylesheet_directory_uri(); @endphp/assets/images/logo-dark.png"
+            alt="triangle with all three sides equal"
+            height="30px"
+            width="auto" />
+          </div>
       @endif
 
 
