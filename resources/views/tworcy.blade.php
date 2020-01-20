@@ -22,6 +22,7 @@
 
           // The User Query
           $user_query = new WP_User_Query( $args );
+
         @endphp
 
           @if ( ! empty( $user_query->results ) )

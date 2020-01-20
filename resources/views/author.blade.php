@@ -10,20 +10,19 @@
       <div class="container">
        <a href="/tworcy" class="powrot"> <span class="theme-orange-color">&#10094;</span> <span>Powrót do Twórców</span></a> <br>
 
-            {{-- {{vdump(    get_user_meta( $curauth -> ID  )  )}} --}}
+ {{-- {{vdump(    get_user_meta( $curauth -> ID  )  )}} --}}
 
             <div class="row">
               <div class="col-sm-4 author-header">
-                  @foreach ( get_user_meta(  $curauth -> ID , 'slim_image_gf' ) as $userAvatar )
-                  <img src="{{$userAvatar}}" alt="User image">
-                  @endforeach
+                @foreach ( get_user_meta(  $curauth -> ID , 'slim_image_gf' ) as $userAvatar )
+                <img src="{{$userAvatar}}" alt="User image">
+                @endforeach
               </div>
               <div class="col-sm-8">
                 <h1>{{ $curauth -> data -> user_nicename}}</h1>
                 <h2>Influencer</h2>
 
-                <p>Lorem ipusm lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumLorem ipusm lorem ipsum lorem ipsum
-                  lorem ipsum lorem ipsum lorem ipsumLorem ipusm lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>{{get_user_meta($curauth -> ID , 'krotki_opis_gf', true)}}</p>
 
                   <h3>Kategorie Twórczości </h3>
 
@@ -77,10 +76,8 @@
       <div class="row">
         <div class="col-md-8">
 
-        <p>Lorem sipsdfads dffad ldfads fadsf dfadsfasdf dfasdfasdfasdfa fadfahfadsfads fdsafasdfasdf dfadsfasdfa fadsf asd</p>
-        <p>Lorem sipsdfads dffad ldfads fadsf dfadsfasdf dfasdfasdfasdfa fasdfa fasd fasdf dsfa dsfads fdsa fdsaj;flj;dkj ffdas fds fads fadsfa sdfasdfadsfa</p>
-        <p>Lorem sipsdfads dffad ldfads fadsf dfadsfasdf dfasdfasdfasdfa fasdfa fasd fasdf dsfa dsfads fdsa fdsaj;flj;dkj ffdas fds fads fadsfa sdfasdfadsfa</p>
-        <p>Lorem sipsdfads dffad ldfads fadsf dfadsfasdf dfasdfasdfasdfa fasdfa fasd fasdf dsfa dsfads fdsa fdsaj;flj;dkj ffdas fds fads fadsfa sdfasdfadsfa</p>
+
+          <p> {{get_user_meta($curauth -> ID , 'long_description_gf', true)}}</p>
 
         </div>
         <div class="col-md-4 social-media">

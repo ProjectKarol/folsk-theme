@@ -47,7 +47,7 @@
 
 <div class="text-center">
 
-  <a class="btn-effect center" href="add-website-here" target="_blank" rel="nofollow noopener">Rozpocznij</a>
+  <a class="btn-effect center" href="add-website-here" target="_self" rel="nofollow noopener">Rozpocznij</a>
 </div>
 
 
@@ -71,8 +71,9 @@ $user_query = new WP_User_Query( $args );
 @if ( ! empty( $user_query->results )  )
 <div class="gallery main-carousel">
   @foreach ( $user_query->results as $user )
-
+  <a href="/author/{{ $user -> data -> user_nicename}}">
   @foreach ( get_user_meta( $user -> ID , 'slim_image_gf' ) as $userAvatar )
+
 <div class="gallery-cell" style="background-image: url('{{$userAvatar}}'); background-size: cover;">
   @endforeach
 
@@ -89,7 +90,9 @@ $user_query = new WP_User_Query( $args );
       {{$categoryitem}}
   </div>
 @endforeach
+
 </div>
+</a>
 @endforeach
 
 
@@ -112,7 +115,7 @@ wp_reset_postdata();
 @endphp
 <div class="text-center">
 
-  <a class="btn-effect center" href="/tworcy/" target="_blank" rel="nofollow noopener">Zobacz wszystkich</a>
+  <a class="btn-effect center" href="/tworcy/" target="_self" rel="nofollow noopener">Zobacz wszystkich</a>
 </div>
 </div>
 </div>
@@ -131,7 +134,7 @@ wp_reset_postdata();
       <p>Zapraszamy do współpracy wszystkich twórców internetowych, którzy poprzez działanie w mediach społecznościowych tworzą ciekawe i angażujące treści i chcą to wykorzystać przy współpracach marketingowych.
         Dołącz do naszej agencji klikając w przycisk poniżej.
       </p>
-      <a class="btn-effect center" href="/dolacz/" target="_blank" rel="nofollow noopener">Dołącz do twórców</a>
+      <a class="btn-effect center" href="/dolacz/" target="_self" rel="nofollow noopener">Dołącz do twórców</a>
       </div>
       <div class="info-box col-md-6">
         <div class="info-header">
@@ -141,7 +144,7 @@ wp_reset_postdata();
         <h2><span class="theme-blue">Jesteś marką,</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
         </div>
         <p>Lorem ipsum lor Lorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lor</p>
-      <a class="btn-effect center" href="/dolacz/#regise" target="_blank" rel="nofollow noopener">Rozpocznij współpracę</a>
+      <a class="btn-effect center" href="/dolacz/#regise" target="_self" rel="nofollow noopener">Rozpocznij współpracę</a>
     </div>
     </div>
   </div>

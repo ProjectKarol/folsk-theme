@@ -53,7 +53,7 @@
 
 
 
-            <a class="btn-effect mx-auto" href="/dolacz/" target="_blank" rel="nofollow noopener">Dołącz do nas</a>
+            <a class="btn-effect mx-auto" href="/dolacz/" target="_self" rel="nofollow noopener">Dołącz do nas</a>
       </div>
     </div>
 
