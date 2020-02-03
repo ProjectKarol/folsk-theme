@@ -52,7 +52,7 @@
 
                     </div> <!-- image-conteanier-->
                       <h2>{{$user -> data -> user_nicename}}</h2>
-                      <p>Influencer</p>
+
                       {{-- {{vdump( $user )}} --}}
                       {{-- {{vdump(get_user_meta( $user -> ID  ))}} --}}
                     </a>

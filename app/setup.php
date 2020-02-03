@@ -136,3 +136,27 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
 });
 });
+
+
+/**
+* addd fonst
+*/
+
+add_action( 'wp_enqueue_scripts' , function () {
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:500,700,800,900&display=swap',
+false );
+} );
+
+// hide admin bar
+
+add_action('init', function () {
+if (!current_user_can('administrator') ) {
+show_admin_bar(false);
+}
+} );
+
+
+// add column to user profile
+
+
+/*this will add column in user list table*/

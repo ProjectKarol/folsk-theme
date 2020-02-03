@@ -136,3 +136,7 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+
+// logo out to home
+add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));

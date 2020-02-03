@@ -90,3 +90,19 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+
+    add_filter('manage_users_columns', 'pippin_add_user_id_column');
+    function pippin_add_user_id_column($columns) {
+        $columns['user_id'] = 'User ID';
+        return $columns;
+    }
+
+    add_action('manage_users_custom_column',  'pippin_show_user_id_column_content', 8, 3);
+    function pippin_show_user_id_column_content($value, $column_name, $user_id) {
+        $user = get_userdata( $user_id );
+        if ( 'user_id' == $column_name )
+            return $user_id;
+        return $value;
+    }

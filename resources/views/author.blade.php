@@ -3,7 +3,9 @@
 @section('content')
   @include('partials.page-header')
       @php
-         $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+      $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+      $imagepath = (get_user_meta(  $curauth -> ID , 'slim_image_gf' ))[0];
+
       @endphp
 
   <div class="tworca-header">
@@ -12,15 +14,14 @@
 
  {{-- {{vdump(    get_user_meta( $curauth -> ID  )  )}} --}}
 
+
             <div class="row">
               <div class="col-sm-4 author-header">
-                @foreach ( get_user_meta(  $curauth -> ID , 'slim_image_gf' ) as $userAvatar )
-                <img src="{{$userAvatar}}" alt="User image">
-                @endforeach
+                <img src="{{$imagepath}}" alt="User image">
               </div>
               <div class="col-sm-8">
                 <h1>{{ $curauth -> data -> user_nicename}}</h1>
-                <h2>Influencer</h2>
+
 
                 <p>{{get_user_meta($curauth -> ID , 'krotki_opis_gf', true)}}</p>
 
@@ -46,29 +47,8 @@
       </div>
 
   </div>
-  <section  class="social-stats">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>Wyświetlenia</h3>
-          <span>91 300 212</span>
-        </div>
-        <div class="col-sm-3">
-          <h3>Subskrypcje</h3>
-          <span>32 342 432</span>
-        </div>
-        <div class="col-sm-3">
-          <h3>Obserwujący</h3>
-          <span>1 300 212</span>
-        </div>
-        <div class="col-sm-3">
-          <h3>Polubienia</h3>
-          <span>87 300 212</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  {{-- <iframe style="min-width: 100%;" src="http://folks.loc:3000/"></iframe> --}}
+  @php echo do_shortcode( "[erw_widget]") @endphp
 
 
   <section class="author-bio-section">

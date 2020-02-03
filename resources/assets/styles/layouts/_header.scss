@@ -11,22 +11,87 @@
   width: 100%;
   padding: 10px 0;
   background: white;
-  z-index: 999;
-
+  box-shadow: $shadow;
+  z-index: 600;
+  transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
   .current_page_item {
-    border-bottom: solid $theme-orange;
+    display: flex;
+    justify-content: center;
+  }
+  .current_page_item::after {
+    border-color: $theme-orange;
+    border-style: solid;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 100%; /*because we want it to be at the bottom of the anchor*/
+    /*because we want it to be at the bottom of the anchor*/
+    /*10px because anchor has a padding of 10px*/
+    width: 60px;
+    height: 0px;
+    /*background: rgba(0,0,0,0.1);*/
+    content: '';
+    opacity: 1;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
   }
   .nav a {
     color: black;
+    font-size: rem(18px);
   }
   .nav a:focus,
   .nav a:hover {
     color: $theme-orange;
-    background-color: #ebebeb !important;
+  }
+  .nav {
+    .menu-items {
+      position: relative;
+    }
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    li ::after {
+      border-color: $theme-orange;
+      border-style: solid;
+      margin: 0 auto;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 100%; /*because we want it to be at the bottom of the anchor*/
+      /*because we want it to be at the bottom of the anchor*/
+      /*10px because anchor has a padding of 10px*/
+      width: 60px;
+      height: 0px;
+      /*background: rgba(0,0,0,0.1);*/
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+
+      transform: translateY(10px);
+    }
+    li > a:hover::after {
+      opacity: 1;
+      -webkit-transform: translateY(1px);
+      -moz-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    .menu-items li {
+      display: inline-block;
+    }
   }
 
   .container {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
   }
@@ -45,4 +110,68 @@
 .page-header {
   display: flex;
   justify-content: center;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  //CSS
+  .banner .container {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  //CSS
+  .banner .container {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  //CSS
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  //CSS
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  //CSS
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  //CSS
 }

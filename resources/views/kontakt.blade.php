@@ -20,8 +20,8 @@
         <div class="col-md-4 ">
           <div class="kontakt-info">
           <h2>Adres</h2>
-          <p>Folks
-            Edwarda Jedlinka 38
+          <p>Folks <br>
+            ul. Edwarda Jelinka 38 <br>
             01-646 Warszawa
           </p>
 

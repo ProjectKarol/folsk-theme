@@ -10,6 +10,10 @@
     position: absolute;
     width: 50%;
   }
+  .corner-image-mobile {
+    width: 100%;
+    height: auto;
+  }
 
   .jak-dzialamy-intro {
     p {
@@ -44,18 +48,115 @@
     background-color: white;
     border-radius: 25px;
     padding: 60px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow;
 
     h3 {
       padding: 15px 0;
     }
 
     .col-sm-4 img {
-      height: 330px;
+      height: 250px;
     }
   }
 
   .btn-effect {
     margin: 0 auto;
+  }
+
+  /*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+  @media (min-width: 1281px) {
+    //CSS
+    .banner .container {
+      display: flex;
+    }
+  }
+
+  /*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    //CSS
+    .banner .container {
+      display: flex;
+    }
+  }
+
+  /*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    //CSS
+  }
+
+  /*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    //CSS
+  }
+
+  /*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    //CSS
+    .jak-dzialamy-intro {
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+    .mobile-size {
+      img {
+        height: 100px;
+        float: right;
+      }
+      h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: $theme-blue;
+      }
+    }
+  }
+
+  /*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    //CSS
+    .jak-dzialamy-intro {
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+    .etapy-wspolpracy {
+      padding: 15px;
+    }
+  }
+  .mobile-size {
+    .col-3 img {
+      height: 100px;
+      float: right;
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      color: $theme-blue;
+    }
   }
 }

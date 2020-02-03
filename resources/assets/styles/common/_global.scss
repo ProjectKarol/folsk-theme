@@ -1,11 +1,30 @@
-$theme-blue: #2b304e;
-$theme-blue-dark: #232941;
-$theme-dark: #394f72;
-$theme-orange: #ff6251;
-$theme-background: #f7f7f7;
+// @import '_mixins.scss';
+@import '_rem.scss';
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  color: $theme-blue;
+}
+
+.fade {
+  background: #2a2f4cd9;
+}
 
 p {
   color: #797c8e;
+  font-size: rem(18px);
+}
+h1 {
+  font-size: rem(54px);
+}
+a {
+  color: $theme-orange;
 }
 
 a:hover {
@@ -89,4 +108,52 @@ a:hover {
 }
 .rozwój {
   mask-image: url('../images/svg/goal.svg');
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* old phones (landscape phones, 360px and up) */
+@media (min-width: 360px) {
+}
+
+/*
+Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  //code here
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  // code hehe
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  // code hehe
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {
+  // code hehe
 }

@@ -1,21 +1,49 @@
 .page-template-front {
-  .banner {
+  .darkBaner {
     background: #2c304e;
+    box-shadow: none;
+    .nav-primary a {
+      color: white;
+    }
+    transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    .home {
+      .logo-img {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url('../images/logo-white.png') no-repeat;
+        width: 140px;
+        height: 43px;
+        padding-left: 140px;
+      }
+    }
+
+    .nav a:focus,
+    .nav a:hover {
+      color: $theme-orange;
+    }
+    .panel .ir {
+      background: transparent;
+      svg {
+        fill: white;
+      }
+    }
   }
-  .nav-primary a {
-    color: white;
+
+  .social {
+    margin-left: 20px;
   }
 
   .container-fluid {
     padding: 0;
   }
+  h3 {
+    font-size: rem(28px);
+    font-weight: 700;
+  }
 
   .home-header {
-    background: url('../images/header-baner.jpg') no-repeat;
-    background-size: cover;
-    background-clip: border-box;
-    padding: 90px 0 40px 0;
-
     h1,
     h2 {
       color: $theme-orange;
@@ -36,7 +64,7 @@
 
     h3 {
       color: $theme-orange;
-      margin: 10px 0;
+      margin: 25px 0 25px 0;
     }
 
     p {
@@ -47,10 +75,16 @@
     .intro {
       box-shadow: 1px 2px 18px 5px #1312121c;
       border-radius: 20px;
-      margin-top: -20px;
       background-color: white;
-      padding-bottom: 40px;
-      margin-bottom: 40px;
+    }
+
+    .btn-effect {
+      font-size: rem(28px);
+      font-weight: 800;
+    }
+
+    .btn-effect:after {
+      background: transparent;
     }
   }
 
@@ -61,23 +95,27 @@
     padding: 50px 0 50px 0;
 
     .gallery-cell {
-      border: solid 4px $theme-orange;
+      border: solid 4px white;
       border-radius: 25px;
-    }
 
-    h1 {
-      color: $theme-orange;
-      text-align: center;
-      padding-bottom: 40px;
-      font-weight: 800;
+      &:hover {
+        border: solid 4px $theme-orange;
+      }
     }
 
     h2 {
       color: $theme-orange;
       text-align: center;
-      font-weight: 800;
-      margin: 20px 0 0 0;
-      padding: 0;
+      font-weight: $black-r;
+      font-size: rem(48px);
+      padding-bottom: 40px;
+    }
+    h3 {
+      color: $theme-orange;
+      text-align: center;
+      font-size: rem(28px);
+      font-weight: $black-r;
+      margin-top: 10px;
     }
 
     .icons-talens {
@@ -98,6 +136,10 @@
       img {
         padding: 5px;
       }
+      span {
+        font-size: rem(10px);
+        font-weight: $black-r;
+      }
     }
 
     p {
@@ -106,10 +148,26 @@
       color: white;
     }
 
+    .flickity-button {
+      background: transparent;
+      color: white;
+      svg {
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .btn-effect {
       margin-top: 30px;
       color: white;
-      border-color: white;
+      &:hover {
+        border: solid 2px $theme-orange;
+      }
+
+      &:after {
+        background-color: transparent;
+      }
     }
   }
 
@@ -120,16 +178,28 @@
     padding: 50px 0 50px 0;
 
     h2 {
-      font-weight: 800;
+      color: #385071;
+      span {
+        font-weight: $black-r;
+        font-size: rem(42px);
+      }
     }
 
     p {
       min-height: 150px;
+      font-size: $medium-r;
+      font-weight: $medium-r;
     }
 
     .info-header {
       display: flex;
       align-items: center;
+      padding-bottom: 20px;
+    }
+
+    .btn-effect {
+      font-size: rem(20px);
+      font-weight: $extra-bold-r;
     }
   }
 
@@ -143,6 +213,45 @@ M E D I A  Q U E R I E S
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Bootstrap 4 breakpoints
 */
+  /* old phones (landscape phones, 360px and up) */
+  @media (min-width: 360px) {
+    //code here
+    .home-header {
+      background: url('../images/header-baner-mobile.jpg') no-repeat;
+      background-size: cover;
+      background-clip: border-box;
+      background-position: bottom;
+      padding: 120px 0 50px 0;
+      text-align: center;
+    }
+    .rozpocznij {
+      .intro {
+        margin: 10px;
+      }
+      .firs-intro {
+        margin-top: -30px;
+      }
+      .btn-effect {
+        width: 96%;
+      }
+    }
+    .home-info-boxes {
+      text-align: center;
+      img {
+        display: none;
+      }
+    }
+    .home-info-boxes {
+      padding-top: 20px;
+      h2 {
+        margin: 0 auto;
+        padding: 20px 0 30px 0;
+        span {
+          font-size: rem(35px);
+        }
+      }
+    }
+  }
 
   /*
 Extra small devices (portrait phones, less than 576px)
@@ -152,12 +261,25 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   /* Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) {
     //code here
+    .home-header {
+      background: url('../images/header-baner-mobile.jpg') no-repeat;
+      background-size: cover;
+      background-clip: border-box;
+      background-position: bottom;
+      padding: 120px 0 430px 0;
+      text-align: center;
+    }
   }
 
   /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
   @media (min-width: 768px) {
-    .rozpocznij .intro {
-      max-width: 32%;
+    .rozpocznij {
+      .btn-effect {
+        width: auto;
+      }
+      .intro {
+        max-width: 32%;
+      }
     }
 
     .icons-talens {
@@ -179,16 +301,56 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         padding: 5px;
       }
     }
+
+    .home-info-boxes {
+      text-align: left;
+      img {
+        display: block;
+      }
+    }
   }
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     // code hehe
+    .home-info-boxes .info-box:first-child {
+      border-right: 1px solid #ccd2da;
+    }
+
+    .rozpocznij {
+      .intro {
+        margin: -50px 0 30px 0;
+        background-color: white;
+        padding-bottom: 10px;
+      }
+    }
+    .home-info-boxes {
+      padding-top: 50px;
+      h2 span {
+        font-size: rem(42px);
+      }
+    }
+    .info-box-jestes-marka {
+      p {
+        padding-left: 20px;
+      }
+    }
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
     // code hehe
+
+    .home-header {
+      background: url('../images/header-baner.jpg') no-repeat;
+      background-size: cover;
+      background-clip: border-box;
+      text-align: left;
+      padding: 140px 0 130px 0;
+    }
+    .home-info-boxes .info-box:first-child {
+      border-right: 1px solid #ccd2da;
+    }
   }
 
   /*

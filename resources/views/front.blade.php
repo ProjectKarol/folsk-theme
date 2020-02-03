@@ -7,38 +7,66 @@
 
 
 @section('content')
-<div class="home-header" >
-  <div class="container">
-    <div class="col-md-6">
-    <h1>CREATORS</h1>
-    <H2>that influence</H2>
-    <p>Folks to nowa agencja influenceru marketingu na polskim rynku.
-      Nasze działania są skierowane do twórców – zarówno marko i mikroinfluencerów, jak i do klientów poszukujących nowego źródła komunikacji.
-      </p>
+{{-- Section 1  --}}
+<div class="home-header d-none d-lg-block" >
+    <div class="container">
+      <div class="row">
+
+
+          <div class="col-md-6">
+          <h1>CREATORS <br> <span style="color:white;">that influence</span></h1>
+
+          <p>Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+            src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-top.png"
+            alt="Dołącz"/>
+            </div>
+      </div>
     </div>
+</div>
+<div class="home-header d-block d-lg-none" >
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-md-6">
+      <h1>CREATORS <br> <span style="color:white;">that influence</span></h1>
+
+      <p>Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+        src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-top.png"
+        alt="Dołącz" width="95%"/>
+        </div>
+  </div>
   </div>
 </div>
-
+{{-- Section 2 rozpocznij  --}}
 <div class="rozpocznij">
 <div class="container">
   <div class="row text-center center-block justify-content-between">
-    <div class="intro col-md-4 col-md-offset-2"><h3>Twórcy</h3>
+    <div class="intro col-md-4 col-md-offset-2 firs-intro"><h3>Twórcy</h3>
       <img
-      src=" {{get_stylesheet_directory_uri()}}/assets/images/komputer.jpg"
+      src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box1.png"
       alt="Komputer"/>
-    <p>Znajdziemy dla Ciebie najlepszych Twórców i przeprowadzimy efektywną kampanię!</p>
+    <p>Znajdziemy dla Ciebie najlepszych Twórców i spełniających Twoje biznesowe i wizerunkowe oczekiwania.</p>
     </div>
     <div class="intro col-md-4 col-md-offset-2"><h3>Pomysł</h3>
       <img
-      src="{{get_stylesheet_directory_uri()}}/assets/images/komputer.jpg"
+      src="{{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box2.png"
       alt="Komputer"/>
-      <p>Dzięki nieszablonowemu myśleniu przeprowadzimy ciekawą i angażującą kampanię!</p>
+      <p>Dzięki nieszablonowemu myśleniu przeprowadzimy efektywną i angażującą kampanię!</p>
     </div>
     <div class="intro col-md-4"><h3>Realizacja</h3>
       <img
-      src="{{get_stylesheet_directory_uri()}}/assets/images/komputer.jpg"
+      src="{{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box3.png"
       alt="Komputer"/>
-      <p>Do zadań podchodzimy kompleksowo i profesjonalnie – zajmiemy się realizacją całej kampanii wg Twoich wytycznych. </p>
+      <p>Do zadań podchodzimy kompleksowo - zdejmujemy ciężar realizacji. </p>
     </div>
   </div>
 
@@ -47,7 +75,7 @@
 
 <div class="text-center">
 
-  <a class="btn-effect center" href="add-website-here" target="_self" rel="nofollow noopener">Rozpocznij</a>
+  <a class="btn-effect center" href="/jak-dzialamy" target="_self" rel="nofollow noopener">Rozpocznij</a>
 </div>
 
 
@@ -55,7 +83,7 @@
 <div class="tworcy">
 <div class="container">
 
-  <h1>Twórcy</h1>
+  <h2>Twórcy</h2>
   @php
 // WP_Query arguments
 $args = array(
@@ -87,7 +115,7 @@ $user_query = new WP_User_Query( $args );
       <div class="box-item {{$categoryitem}}">
 
       </div>
-      {{$categoryitem}}
+       <span>{{$categoryitem}}</span>
   </div>
 @endforeach
 
@@ -97,7 +125,7 @@ $user_query = new WP_User_Query( $args );
 
 
 
-  <h2>{{$user -> data -> user_nicename}}  </h2><p>Influencer</p>
+  <h3>{{$user -> data -> user_nicename}}  </h3>
 </div>
 
 
@@ -126,9 +154,9 @@ wp_reset_postdata();
       <div class="info-box col-md-6">
         <div class="info-header">
         <img
-        src=" {{get_stylesheet_directory_uri()}}/assets/images/icon-planet-women.jpg"
+        src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-jestestworca.png"
         alt="Jeseś twórcą"/>
-         <h2> <span class="theme-blue">Jesteś </span> <br> <span class="theme-orange-color">twórcą ?</span> </h2>
+         <h2> <span style="color:#385071;">Jesteś </span> <br> <span class="theme-orange-color">twórcą ?</span> </h2>
 
         </div>
       <p>Zapraszamy do współpracy wszystkich twórców internetowych, którzy poprzez działanie w mediach społecznościowych tworzą ciekawe i angażujące treści i chcą to wykorzystać przy współpracach marketingowych.
@@ -136,14 +164,14 @@ wp_reset_postdata();
       </p>
       <a class="btn-effect center" href="/dolacz/" target="_self" rel="nofollow noopener">Dołącz do twórców</a>
       </div>
-      <div class="info-box col-md-6">
+      <div class="info-box col-md-6 info-box-jestes-marka ">
         <div class="info-header">
           <img
-          src=" {{get_stylesheet_directory_uri()}}/assets/images/icon-planet-women.jpg"
+          src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-marka.png"
           alt="Jeseś twórcą"/>
-        <h2><span class="theme-blue">Jesteś marką,</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
+        <h2><span style="color:#385071;">Jesteś marką i</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
         </div>
-        <p>Lorem ipsum lor Lorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lorLorem ipsum lor</p>
+        <p >Jeśli potrzebujesz uatrakcyjnić działania marketingowe twojej firmy, zgłoś się do nas z zapytaniem o współpracę.  Razem ustalimy wspólne działania które pomogą dotrzeć do jak największej liczby potencjalnych klientów/odbiorców.</p>
       <a class="btn-effect center" href="/dolacz/#regise" target="_self" rel="nofollow noopener">Rozpocznij współpracę</a>
     </div>
     </div>

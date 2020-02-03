@@ -1,0 +1,102 @@
+.modal-dialog {
+  .modal-header {
+    button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    h5 {
+      margin: 0 auto;
+      font-weight: 700;
+      font-size: 30px;
+      color: $theme-dark;
+    }
+  }
+  .modal-content {
+    border-radius: 20px;
+    padding: 25px 25px 0 25px;
+  }
+  .lwa-default {
+    input {
+      padding: 5px 4px;
+      letter-spacing: normal;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      border-radius: 10px;
+    }
+    .btn-effect {
+      width: 100%;
+      margin-top: 25px;
+    }
+    .remember-me {
+      display: flex;
+      input {
+        width: auto;
+        border-radius: 10px;
+        padding: 10px 0 10px 10px;
+        border: solid 1px #99b4c9;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        margin: 5px;
+      }
+    }
+  }
+
+  .lwa-avatar {
+    img {
+      width: 70px;
+    }
+  }
+  #wp-logout {
+    button {
+      width: 100%;
+    }
+  }
+
+  .woo-slg-social-container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .woo-slg-login-wrapper {
+      width: 100%;
+
+      .woo-slg-social-login-googleplus {
+        background: white;
+        color: $theme-grey !important;
+      }
+      a {
+        min-width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query for `xs` since this is the default in Bootstrap
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    //content
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    //content
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    //content
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    .modal-content {
+      width: 600px;
+    }
+  }
+}

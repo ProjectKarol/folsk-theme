@@ -21,12 +21,13 @@
     background: url('../images/dolacz-tlo.jpg') no-repeat;
     background-size: cover;
     background-clip: border-box;
+    padding: 70px 0 100px 0;
 
     .image-conteanier {
       width: 100%;
       border: solid 5px white;
       border-radius: 20px;
-      box-shadow: 1px 2px 15px;
+      box-shadow: $shadow;
       display: flex;
       align-items: flex-end;
       justify-content: center;

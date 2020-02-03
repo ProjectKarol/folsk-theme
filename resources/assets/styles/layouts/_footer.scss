@@ -31,6 +31,8 @@ footer {
 
       a {
         color: white;
+        font-size: rem(18px);
+        font-weight: $bold-r;
       }
 
       a:hover {
@@ -60,10 +62,11 @@ footer {
   }
   .row {
     width: 100%;
+    align-items: center;
   }
   span {
     color: #898c9b;
-    margin: 10px 0;
+    font-size: rem(15px);
   }
 }
 
@@ -82,6 +85,12 @@ Bootstrap 4 breakpoints
 Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
+/* old phones (landscape phones, 360px and up) */
+@media (min-width: 360px) {
+  .menu-footer-container {
+    display: none;
+  }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -103,6 +112,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .fols-part {
     display: flex;
     justify-content: flex-end;
+  }
+  .menu-footer-container {
+    display: block;
   }
 }
 

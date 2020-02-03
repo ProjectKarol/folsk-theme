@@ -9,15 +9,15 @@
   @include('partials.page-header')
   <div class="dolocz-page">
 
-  <div class="container">
-    <h1>Dołącz do Folsk</h1>
+  <div class="container" id="tab-content">
+    <h1>Dołącz do Folks</h1>
     <!-- Nav pills -->
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="nav nav-pills" >
       <li class="nav-item-tab ">
         <a class="nav-link nav-item-tab-right active " data-toggle="pill" href="#login">Dołącz jako twórca</a>
       </li>
       <li class="nav-item-tab">
-        <a class="nav-link nav-item-tab-left" data-toggle="pill" href="#regis">Znajdź twórcę dla swojej marki</a>
+        <a class="nav-link nav-item-tab-left" id="znajdz-tworce" data-toggle="pill" href="#regis">Znajdź twórcę dla swojej marki</a>
       </li>
     </ul>
 
@@ -27,16 +27,19 @@
         @if (is_user_logged_in())
         {{gravity_form( 2, false, false, false, '', true )}}
         @else
-        {{gravity_form( 1, false, false, false, '', false )}}
+        {{gravity_form( 4, false, false, false, '', false )}}
+        <hr>
+        @php echo do_shortcode('[woo_social_login networks="googleplus,facebook"][/woo_social_login]'); @endphp
+        <p>Masz ju konto <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="false"><span>Zaloguj się</span></a></p>
         @endif
 
    {{-- {{gravity_form( 1, false, false, false, '', false )}} --}}
       </div>
-      <div id="regis" class="container tab-pane fade">
+      <div id="regis" class="container tab-pane">
         <div class="row">
           <div class="col-sm-4">
         <img
-        src=" {{get_stylesheet_directory_uri()}}/assets/images/dolacz2-image.jpg"
+        src=" {{get_stylesheet_directory_uri()}}/assets/images/new/dolacz.png"
         alt="Dołącz"/>
           </div>
           <div class="col-sm-8 znajdz-toworce-opis">
@@ -50,6 +53,31 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+
+// Javascript to enable link to tab
+var url = document.location.toString();
+
+
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+}
+if(url.includes("#regise")){
+
+  document.addEventListener('DOMContentLoaded', ()=>eventFire(document.getElementById('znajdz-tworce'), 'click'), false);
+}
+
+
+
+</script>
 
   {!! get_the_posts_navigation() !!}
 @endsection

@@ -1,8 +1,51 @@
-.page-template-dolacz {
+.page-template-dolacz,
+.page-template-ustawienia {
   .dolocz-page {
     background: url('../images/dolacz-tlo.jpg') no-repeat;
     background-size: cover;
     background-clip: border-box;
+    padding-top: 100px;
+  }
+  p {
+    text-align: center;
+  }
+  .woo-slg-social-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    .woo-slg-login-wrapper {
+      width: 100%;
+
+      .woo-slg-social-login-googleplus {
+        background: white;
+        color: $theme-grey !important;
+      }
+      a {
+        min-width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+  #gform_4 {
+    max-width: 600px;
+    .top_label input.medium,
+    .ginput_container_password span.medium,
+    input {
+      width: 100% !important;
+    }
+
+    #input_4_4_1_container {
+      button {
+        height: 100%;
+        width: 40px;
+      }
+    }
+
+    li.gfield {
+      padding-right: 0px !important;
+    }
   }
 
   .gsection {
@@ -17,14 +60,10 @@
   }
   input {
     border-radius: 10px;
-    padding: 10px 0 10px 50px;
+    padding: 10px 0 10px 10px;
     border: solid 1px #99b4c9;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
-  }
-
-  .container {
-    padding-bottom: 30px;
   }
 
   .page-header {
@@ -48,7 +87,7 @@
 
   .nav-item-tab {
     width: 50%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow;
     border-radius: 30px 30px 0 0;
   }
 
@@ -62,7 +101,7 @@
 
   .nav-pills .nav-link {
     font-weight: bold;
-    font-size: 25px;
+
     padding-top: 13px;
     text-align: center;
     background: #cbcad3;
@@ -74,7 +113,7 @@
   .nav-pills .nav-link.active {
     background: #fff;
     color: $theme-orange;
-    font-size: 25px;
+
     box-shadow: none;
   }
 
@@ -85,7 +124,7 @@
     background: #fff;
     color: #000;
     z-index: 100;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow;
     padding: 30px;
     margin-bottom: 50px;
     border-radius: 0 0 30px 30px;
@@ -96,6 +135,9 @@
     width: 100px;
     margin: 0 auto;
     float: right;
+  }
+  #regis {
+    padding: 30px 0px;
   }
 
   // gravity forms
@@ -297,7 +339,8 @@
   }
 
   #gform_submit_button_1,
-  #gform_submit_button_2 {
+  #gform_submit_button_2,
+  #gform_submit_button_5 {
     margin: 0 auto;
     display: flex;
     background-color: $theme-orange;
@@ -322,5 +365,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query for `xs` since this is the default in Bootstrap
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 360px) {
+    // style here
+    .nav-pills li a {
+      font-size: 18px;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    // style here
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    // style here
+    .nav-pills li a {
+      font-size: 25px;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    // style here
   }
 }

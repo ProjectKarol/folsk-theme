@@ -1,0 +1,98 @@
+.single-influencerzy {
+  h1 {
+    color: $theme-orange;
+    font-weight: 800;
+  }
+  .tworca-header {
+    background: url('../images/tworcy.jpg') no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    padding: 50px 0 50px 0;
+
+    h2,
+    h3 {
+      color: white;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      padding: 20px 0;
+    }
+  }
+
+  .powrot {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .author-header {
+    margin: 15px 0px 30px 0px;
+
+    img {
+      width: 100%;
+      border: solid 5px white;
+      border-radius: 20px;
+      box-shadow: 1px 2px 15px;
+    }
+  }
+
+  .social-stats {
+    background-color: #e5e9ee;
+    text-align: center;
+    padding: 30px 0;
+    h3 {
+      font-size: 1.2rem;
+    }
+    span {
+      color: $theme-orange;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+
+    .col-sm-3 {
+      border-right: solid 1px #bcc4cf;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .author-bio-section {
+    background-color: #f7f7f7;
+    padding: 30px 0;
+
+    p {
+      padding-left: 75px;
+      text-indent: -32px;
+    }
+    p::before {
+      content: url('../images/logo-icon.png'); /* with class ModalCarrot ??*/
+      position: relative; /*or absolute*/
+      top: 20px;
+      left: -15px;
+    }
+
+    .social-media {
+      background-color: white;
+      border-radius: 25px;
+      padding: 15px;
+
+      h2 {
+        color: $theme-orange;
+      }
+    }
+
+    svg {
+      height: 35px;
+    }
+  }
+  .ir {
+    padding: 10px 0px;
+    border-bottom: solid 1px;
+  }
+  span {
+    padding-left: 10px;
+  }
+}

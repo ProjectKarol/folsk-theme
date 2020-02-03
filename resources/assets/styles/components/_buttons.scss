@@ -1,18 +1,101 @@
-.btn-effect {
-  color: $theme-orange;
-  text-transform: uppercase;
+$color: white;
+a.btn-effect {
   text-decoration: none;
-  font-weight: 700;
-  border: solid 2px $theme-orange;
-  padding: 10px 20px;
-  border-radius: 5px;
+}
+.btn-effect {
   display: inline-block;
-  transition: all 0.4s ease 0s;
+  border-radius: 0.4rem;
+  border: solid 2px;
+  color: $theme-orange;
+  font-size: 1rem;
+  transition: all 0.3s;
+  position: relative;
+
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 0.4rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $theme-orange;
+    transition: all 0.3s;
+    border-radius: 0.2rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: white;
+    &:before {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
 }
 
-.btn-effect:hover {
-  text-decoration: none;
-  letter-spacing: 1px;
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
+a .btn-effect:hover {
+  cursor: pointer;
+}
+
+/*
+Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* old phones (landscape phones, 360px and up) */
+@media (min-width: 360px) {
+  //code here
+  .btn-effect {
+    width: 100%;
+    padding: 0.4rem 2rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  //code here
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .btn-effect {
+    width: auto;
+    padding: 0.5rem 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  // code hehe
+  .home-info-boxes .info-box:first-child {
+    border-right: 1px solid #ccd2da;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  // code hehe
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {
+  // code hehe
 }

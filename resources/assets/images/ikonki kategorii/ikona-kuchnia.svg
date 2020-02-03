@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="145px" height="113px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 10179 7917"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#5D6278}
+    .fil0 {fill:#F3F3F5}
+   ]]>
+  </style>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="10179" height="7917" rx="512" ry="512"/>
+  <path class="fil1" d="M7376 3034l-357 0 0 -276c0,-53 -43,-97 -96,-97l-3483 0c-53,0 -96,44 -96,97l0 276 -362 0c-53,0 -96,43 -96,96 0,53 43,96 96,96l363 0 0 814c0,427 305,579 593,579l2497 0c427,0 578,-299 578,-579l0 -814 363 0c53,0 96,-43 96,-96 0,-53 -43,-96 -96,-96zm-1895 -1264c24,-46 37,-98 38,-150 0,-186 -152,-337 -338,-337 -186,0 -337,151 -337,337 0,52 13,104 37,150 -806,41 -1542,247 -1542,607 -1,53 42,97 95,97 4,0 7,0 11,-1l3482 0c53,0 96,-43 96,-96 0,-360 -733,-566 -1542,-607zm-295 -294c79,0 143,64 143,143 0,79 -64,143 -143,143 -79,0 -143,-64 -143,-143 0,-79 64,-143 143,-143zm-1586 808c173,-155 726,-320 1516,-329 60,-1 120,0 181,1 768,14 1305,179 1475,328l-3172 0zm3226 1756c0,177 -67,386 -385,386l-2507 0c-149,0 -400,-50 -400,-386l0 -1186 3292 0 0 1186z"/>
+ </g>
+</svg>

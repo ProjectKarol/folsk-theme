@@ -14,8 +14,10 @@
 /** Import theme styles */
 @import 'common/global';
 @import 'components/buttons';
+@import 'components//mobile-menu';
 @import 'components/flickity-carousel';
 @import 'components/social-icons';
+@import 'components/login-modal';
 @import 'components/comments';
 @import 'components/forms';
 @import 'components/wp-classes';
@@ -27,6 +29,8 @@
 @import 'layouts/tinymce';
 @import 'pages/home.scss';
 @import 'pages/dolacz.scss';
+@import 'pages/ustawienia.scss';
+@import 'pages/singel-infuencer.scss';
 @import 'pages/jak-dzialamy.scss';
 @import 'pages/onas.scss';
 @import 'pages//tworcy.scss';

@@ -3,7 +3,7 @@
     background: url('../images/dolacz-tlo.jpg') no-repeat;
     background-size: cover;
     background-clip: border-box;
-    padding: 20px 0;
+    padding: 100px 0;
   }
 
   .page-header {
@@ -28,7 +28,7 @@
     border-radius: 15px;
 
     border: solid 1px #b0c5d4;
-    box-shadow: 5px 5px 5px #bdbdbd;
+    box-shadow: $shadow;
     padding: 10px;
   }
 
@@ -36,7 +36,7 @@
     padding: 20px 10px;
     background: white;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px #bdbdbd;
+    box-shadow: $shadow;
   }
 
   #gform_submit_button_3 {
@@ -51,11 +51,11 @@
     border-radius: 15px;
     color: $theme-orange;
     transition: all 0.4s ease 0s;
-    box-shadow: 7px 6px 11px -4px rgba(0, 0, 0, 0.57);
+    box-shadow: $shadow;
 
     &:hover {
       letter-spacing: 1px;
-      box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+      box-shadow: $shadow;
       transition: all 0.4s ease 0s;
       min-width: 210px;
       background-color: $theme-orange;
