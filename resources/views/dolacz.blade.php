@@ -25,7 +25,7 @@
     <div class="tab-content">
       <div id="login" class="container tab-pane active">
         @if (is_user_logged_in())
-        {{gravity_form( 2, false, false, false, '', true )}}
+        {{gravity_form( 6, false, false, false, '', true )}}
         @else
         {{gravity_form( 4, false, false, false, '', false )}}
         <hr>

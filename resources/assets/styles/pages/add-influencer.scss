@@ -1,0 +1,420 @@
+.page-template-dolacz,
+.page-template-ustawienia {
+  .dolocz-page {
+    background: url('../images/dolacz-tlo.jpg') no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    padding-top: 100px;
+  }
+  p {
+    text-align: center;
+  }
+  .woo-slg-social-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    .woo-slg-login-wrapper {
+      width: 100%;
+
+      .woo-slg-social-login-googleplus {
+        background: white;
+        color: $theme-grey !important;
+      }
+      a {
+        min-width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+  #gform_4 {
+    max-width: 600px;
+    .top_label input.medium,
+    .ginput_container_password span.medium,
+    input {
+      width: 100% !important;
+    }
+
+    #input_4_4_1_container {
+      button {
+        height: 100%;
+        width: 40px;
+      }
+    }
+
+    li.gfield {
+      padding-right: 0px !important;
+    }
+  }
+
+  .gsection {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px !important;
+  }
+
+  .gfield_checkbox {
+    max-width: 800px;
+    margin: 0 auto !important;
+  }
+  input {
+    border-radius: 10px;
+    padding: 10px 0 10px 10px;
+    border: solid 1px #99b4c9;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  // .content {
+  //   width: 450px;
+  //   height: auto;
+  //   margin: 0 auto;
+  //   padding: 30px;
+  // }
+
+  .nav-pills {
+    width: 100%;
+  }
+
+  .nav-item-tab {
+    width: 50%;
+    box-shadow: $shadow;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .nav-item-tab-right {
+    border-radius: 30px 0 0 0;
+  }
+
+  .nav-item-tab-left {
+    border-radius: 0 30px 0 0;
+  }
+
+  .nav-pills .nav-link {
+    font-weight: bold;
+
+    padding-top: 13px;
+    text-align: center;
+    background: #cbcad3;
+    color: #5e6278;
+    height: 70px;
+    box-shadow: inset 0 -12px 10px -13px black;
+  }
+
+  .nav-pills .nav-link.active {
+    background: #fff;
+    color: $theme-orange;
+
+    box-shadow: none;
+  }
+
+  .tab-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    color: #000;
+    z-index: 100;
+    box-shadow: $shadow;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .tab-content button {
+    border-radius: 15px;
+    width: 100px;
+    margin: 0 auto;
+    float: right;
+  }
+  #regis {
+    padding: 30px 0px;
+  }
+
+  // gravity forms
+
+  #input_1_7 {
+    background: url('../images/icons/facebook-icon.png') no-repeat scroll 2px
+      8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  #input_1_10 {
+    background: url('../images/icons/instagram.png') no-repeat scroll 2px 8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  #input_1_11 {
+    background: url('../images/icons/youtube.png') no-repeat scroll 2px 8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  #input_1_12 {
+    background: url('../images/icons/snapchat.png') no-repeat scroll 2px 8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  #input_1_13 {
+    background: url('../images/icons/twitter.png') no-repeat scroll 2px 8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  #input_1_14 {
+    background: url('../images/icons/linkedin.png') no-repeat scroll 2px 8px;
+    display: block;
+    padding-left: 40px;
+  }
+
+  // kategorie twórczości
+  #field_1_9,
+  #field_2_9,
+  #field_6_9 {
+    .gfield_checkbox {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+      gap: 10px;
+
+      svg {
+        height: 50px;
+        width: auto;
+        fill: #ff6251;
+        border: none;
+        padding: 0;
+        margin: 5px;
+        border-radius: 0;
+      }
+
+      input {
+        display: none !important;
+      }
+
+      label {
+        padding: 10px !important;
+        display: flex !important;
+        flex-direction: column;
+        align-content: space-around;
+        background: #f3f3f5;
+        text-align: center;
+        min-width: 130px;
+        min-height: 130px;
+        border-radius: 20px;
+
+        &:hover {
+          background: #5d6278;
+          color: white;
+
+          svg {
+            fill: white;
+          }
+        }
+      }
+    }
+
+    #choice_1_9_1:checked + #label_1_9_1,
+    #choice_1_9_2:checked + #label_1_9_2,
+    #choice_1_9_3:checked + #label_1_9_3,
+    #choice_1_9_4:checked + #label_1_9_4,
+    #choice_1_9_5:checked + #label_1_9_5,
+    #choice_1_9_6:checked + #label_1_9_6,
+    #choice_1_9_7:checked + #label_1_9_7,
+    #choice_1_9_8:checked + #label_1_9_8,
+    #choice_1_9_9:checked + #label_1_9_9,
+    #choice_1_9_11:checked + #label_1_9_11,
+    #choice_1_9_12:checked + #label_1_9_12,
+    #choice_1_9_13:checked + #label_1_9_13,
+    #choice_1_9_14:checked + #label_1_9_14,
+    #choice_1_9_15:checked + #label_1_9_15,
+    #choice_1_9_16:checked + #label_1_9_16,
+    #choice_2_9_1:checked + #label_2_9_1,
+    #choice_2_9_2:checked + #label_2_9_2,
+    #choice_2_9_3:checked + #label_2_9_3,
+    #choice_2_9_4:checked + #label_2_9_4,
+    #choice_2_9_5:checked + #label_2_9_5,
+    #choice_2_9_6:checked + #label_2_9_6,
+    #choice_2_9_7:checked + #label_2_9_7,
+    #choice_2_9_8:checked + #label_2_9_8,
+    #choice_2_9_9:checked + #label_2_9_9,
+    #choice_2_9_11:checked + #label_2_9_11,
+    #choice_2_9_12:checked + #label_2_9_12,
+    #choice_2_9_13:checked + #label_2_9_13,
+    #choice_2_9_14:checked + #label_2_9_14,
+    #choice_2_9_15:checked + #label_2_9_15,
+    #choice_2_9_16:checked + #label_2_9_16,
+    // new form nr 6
+    #choice_6_9_1:checked  + #label_6_9_1,
+    #choice_6_9_2:checked  + #label_6_9_2,
+    #choice_6_9_3:checked  + #label_6_9_3,
+    #choice_6_9_4:checked  + #label_6_9_4,
+    #choice_6_9_5:checked  + #label_6_9_5,
+    #choice_6_9_6:checked  + #label_6_9_6,
+    #choice_6_9_7:checked  + #label_6_9_7,
+    #choice_6_9_8:checked  + #label_6_9_8,
+    #choice_6_9_9:checked  + #label_6_9_9,
+    #choice_6_9_10:checked  + #label_6_9_10,
+    #choice_6_9_11:checked  + #label_6_9_11,
+    #choice_6_9_12:checked  + #label_6_9_12,
+    #choice_6_9_13:checked  + #label_6_9_13,
+    #choice_6_9_14:checked  + #label_6_9_14,
+    #choice_6_9_15:checked  + #label_6_9_15,
+    #choice_6_9_16:checked  + #label_6_9_16 {
+      background: $theme-orange;
+
+      svg {
+        fill: white;
+      }
+
+      color: white;
+    }
+  }
+
+  // zgody formalne
+
+  #field_1_17,
+  #field_2_17 {
+    .gchoice_select_all,
+    .gchoice_1_17_1,
+    .input_17.2,
+    .gchoice_2_17_1,
+    .input_17.2 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      margin: 10px !important;
+      min-height: 30px !important;
+    }
+
+    .gchoice_select_all > span,
+    .gchoice_1_17_1 > span,
+    .gchoice_1_17_1 > span,
+    .gchoice_2_17_1 > span,
+    .gchoice_2_17_1 > span {
+      color: #34495e;
+      padding: 0.5rem 0.25rem;
+    }
+
+    .gchoice_select_all > input,
+    .gchoice_1_17_1 > input,
+    .gchoice_1_17_2 > input,
+    .gchoice_2_17_1 > input,
+    .gchoice_2_17_2 > input {
+      padding: 10px;
+      // -webkit-appearance: none;
+      // -moz-appearance: none;
+      // -o-appearance: none;
+      appearance: none;
+      border: 1px solid #34495e;
+      border-radius: 4px;
+      outline: none;
+      transition-duration: 0.3s;
+      background-color: #f3f3f5;
+      cursor: pointer;
+    }
+
+    .gchoice_select_all > input:checked,
+    .gchoice_1_17_1 > input:checked,
+    .gchoice_1_17_2 > input:checked,
+    .gchoice_2_17_1 > input:checked,
+    .gchoice_2_17_2 > input:checked {
+      border: 1px solid #f3f3f5;
+      background-color: $theme-orange;
+    }
+
+    .gchoice_select_all > input:checked + span::before,
+    .gchoice_1_17_1 > input:checked + span::before,
+    .gchoice_1_17_2 > input:checked + span::before,
+    .gchoice_2_17_1 > input:checked + span::before,
+    .gchoice_2_17_2 > input:checked + span::before {
+      content: '\2713';
+      display: block;
+      text-align: center;
+      color: #f3f3f5;
+      position: absolute;
+      left: 0.7rem;
+      top: 0.2rem;
+    }
+
+    .gchoice_select_all > input:active,
+    .gchoice_1_17_1 > input:active,
+    .gchoice_1_17_2 > input:active .gchoice_2_17_1 > input:active,
+    .gchoice_2_17_2 > input:active {
+      border: 2px solid $theme-orange;
+    }
+  }
+
+  #gform_submit_button_1,
+  #gform_submit_button_2,
+  #gform_submit_button_5,
+  #gform_submit_button_6 {
+    margin: 0 auto;
+    display: flex;
+    background-color: $theme-orange;
+    min-width: 200px;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 0;
+    justify-content: center;
+    color: white;
+    transition: all 0.4s ease 0s;
+    box-shadow: 7px 6px 11px -4px rgba(0, 0, 0, 0.57);
+
+    &:hover {
+      letter-spacing: 1px;
+      box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.4s ease 0s;
+      min-width: 210px;
+    }
+  }
+
+  .znajdz-toworce-opis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query for `xs` since this is the default in Bootstrap
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 360px) {
+    // style here
+    .nav-pills li a {
+      font-size: 18px;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    // style here
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    // style here
+    .nav-pills li a {
+      font-size: 25px;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    // style here
+  }
+}
