@@ -17,7 +17,7 @@
 
             <div class="row">
               <div class="col-sm-4 author-header">
-                <img src="{{$imagepath}}" alt="User image">
+                <img src="{{$imagepath}}" alt="User image" >
               </div>
               <div class="col-sm-8">
                 <h1>{{ $curauth -> data -> user_nicename}}</h1>

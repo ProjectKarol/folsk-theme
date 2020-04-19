@@ -30,7 +30,7 @@
         {{gravity_form( 4, false, false, false, '', false )}}
         <hr>
         @php echo do_shortcode('[woo_social_login networks="googleplus,facebook"][/woo_social_login]'); @endphp
-        <p>Masz ju konto <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="false"><span>Zaloguj się</span></a></p>
+        <p>Masz już konto <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="false"><span>Zaloguj się</span></a></p>
         @endif
 
    {{-- {{gravity_form( 1, false, false, false, '', false )}} --}}
@@ -46,7 +46,7 @@
         <p style=" font-size:18px;">Foks nie ma dla nas rzeczy niemożliwych. Oferujemy kompleksową obsługę - od wyboru twórców i nawiązanie współpracy, przez realizację kampanii, do zmierzenia efektów w raporcie.
 
         </p>
-        <p style="font-weight:bold; color:##2b3050;">Napisz na <span style="color:#ff6251 ;">kontakt@folks.pl</span> i sprawdź co potrafimy</p>
+        <p style="font-weight:bold; color:##2b3050;">Napisz na <span style="color:#ff6251 ;"><a href="mailto:kontakt@folks.pl">kontakt@folks.pl</a></span> i sprawdź co potrafimy</p>
           </div>
         </div>
       </div>

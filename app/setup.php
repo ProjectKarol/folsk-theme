@@ -22,7 +22,7 @@ add_action('wp_enqueue_scripts', function () {
 /**
  * Add image size
  */
-add_image_size( "carouser_image", 300, 300, false );
+add_image_size( "carouser_image", 300, 300, true );
 
 /**
  * Theme setup
@@ -159,4 +159,5 @@ show_admin_bar(false);
 // add column to user profile
 
 
-/*this will add column in user list table*/
+
+// Do NOT include the opening php tag

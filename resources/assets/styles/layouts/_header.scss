@@ -19,14 +19,13 @@
     justify-content: center;
   }
   .current_page_item::after {
-    border-color: $theme-orange;
-    border-style: solid;
+    border-bottom: solid 2px $theme-orange;
     margin: 0 auto;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 100%; /*because we want it to be at the bottom of the anchor*/
+    top: 80%; /*because we want it to be at the bottom of the anchor*/
     /*because we want it to be at the bottom of the anchor*/
     /*10px because anchor has a padding of 10px*/
     width: 60px;
@@ -57,34 +56,6 @@
       }
     }
 
-    li ::after {
-      border-color: $theme-orange;
-      border-style: solid;
-      margin: 0 auto;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 100%; /*because we want it to be at the bottom of the anchor*/
-      /*because we want it to be at the bottom of the anchor*/
-      /*10px because anchor has a padding of 10px*/
-      width: 60px;
-      height: 0px;
-      /*background: rgba(0,0,0,0.1);*/
-      content: '';
-      opacity: 0;
-      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-      transition: opacity 0.3s, transform 0.3s;
-
-      transform: translateY(10px);
-    }
-    li > a:hover::after {
-      opacity: 1;
-      -webkit-transform: translateY(1px);
-      -moz-transform: translateY(1px);
-      transform: translateY(1px);
-    }
     .menu-items li {
       display: inline-block;
     }

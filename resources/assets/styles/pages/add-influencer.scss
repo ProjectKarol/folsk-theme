@@ -9,6 +9,12 @@
   p {
     text-align: center;
   }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #395172;
+    padding-bottom: 20px;
+  }
   .woo-slg-social-container {
     max-width: 600px;
     margin: 0 auto;
@@ -184,10 +190,6 @@
   #field_2_9,
   #field_6_9 {
     .gfield_checkbox {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-      gap: 10px;
-
       svg {
         height: 50px;
         width: auto;
@@ -359,6 +361,7 @@
   #gform_submit_button_1,
   #gform_submit_button_2,
   #gform_submit_button_5,
+  #gform_submit_button_4,
   #gform_submit_button_6 {
     margin: 0 auto;
     display: flex;
@@ -394,6 +397,11 @@
     .nav-pills li a {
       font-size: 18px;
     }
+    .gfield_checkbox {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+    }
   }
 
   // Small devices (landscape phones, 576px and up)
@@ -410,6 +418,11 @@
     // style here
     .nav-pills li a {
       font-size: 25px;
+    }
+    .gfield_checkbox {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+      gap: 10px;
     }
   }
 

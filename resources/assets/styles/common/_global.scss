@@ -51,63 +51,259 @@ a:hover {
   background-color: $theme-orange;
   padding: 0 10px;
   margin: 0 3px 10px 3px;
-  height: 100px;
+  height: 75px;
   color: white;
   text-align: center;
+  font-size: 13px;
+  z-index: 9;
 
   .box-item {
-    padding: 20px;
-    margin: 13px;
-    mask-size: cover;
+    padding: 0px 20px;
+    mask-size: 49px;
+    mask-position: center;
+    mask-repeat: no-repeat;
     background-color: white;
-    height: 30px;
+    height: 50px;
+    min-width: 75px;
   }
 }
 
 .podróże {
-  mask-image: url('../images/svg/suitcase.svg');
+  mask-image: url('../images/svg-xxx/ikona-podroze.svg');
+}
+#label_6_9_8:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-podroze.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .moda {
-  mask-image: url('../images/svg/high-heels.svg');
+  mask-image: url('../images/svg-xxx/ikona-moda.svg');
+}
+#label_6_9_6:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-moda.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .zwierzęta {
-  mask-image: url('../images/svg/pawprint.svg');
+  mask-image: url('../images/svg-xxx/ikona-zwierzeta.svg');
+}
+#label_6_9_16:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-zwierzeta.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .kuchnia {
-  mask-image: url('../images/svg/pan.svg');
+  mask-image: url('../images/svg-xxx/ikona-kuchnia.svg');
+}
+#label_6_9_3:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-kuchnia.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .sport {
-  mask-image: url('../images/svg/basketball-ball-variant.svg');
+  mask-image: url('../images/svg-xxx/ikona-sport.svg');
+}
+#label_6_9_12:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-sport.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .kultura {
-  mask-image: url('../images/svg/open-magazine.svg');
+  mask-image: url('../images/svg-xxx/ikona-kultura.svg');
+}
+#label_6_9_4:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-kultura.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .sztuka {
-  mask-image: url('../images/svg/column.svg');
+  mask-image: url('../images/svg-xxx/ikona-sztuka.svg');
+}
+#label_6_9_13:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-sztuka.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .ekologia {
-  mask-image: url('../images/svg/leaf.svg');
+  mask-image: url('../images/svg-xxx/ikona-ekologia.svg');
+}
+#label_6_9_2:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-ekologia.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .ogród {
-  mask-image: url('../images/svg/plant.svg');
+  mask-image: url('../images/svg-xxx/ikona-domiogrod.svg');
 }
+#label_6_9_1:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-white/ikona-domiogrod.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    background-image: url('../images/svg-white/ikona-domiogrod.svg');
+  }
+}
+
 .technologia {
-  mask-image: url('../images/svg/monitor.svg');
+  background-image: url('../images/svg-white/ikona-domiogrod.svg');
+}
+#label_6_9_14:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-technologia.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .rozrywka {
-  mask-image: url('../images/svg/game-controller.svg');
+  mask-image: url('../images/svg-xxx/ikona-rozrywka.svg');
+  margin-left: 2px !important;
+}
+#label_6_9_9:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-rozrywka.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .lifestyle {
-  mask-image: url('../images/svg/martini.svg');
+  mask-image: url('../images/svg-xxx/ikona-lifestyle.svg');
+}
+
+#label_6_9_5:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-lifestyle.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .motoryzacja {
-  mask-image: url('../images/svg/car.svg');
+  mask-image: url('../images/svg-xxx/ikona-motoryzacja.svg');
+}
+#label_6_9_7:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-motoryzacja.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .uroda {
-  mask-image: url('../images/svg/lipstick.svg');
+  mask-image: url('../images/svg-xxx/ikona-uroda.svg');
+}
+#label_6_9_15:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-uroda.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
 }
 .rozwój {
-  mask-image: url('../images/svg/goal.svg');
+  mask-image: url('../images/svg-xxx/ikona-rozwoj.svg');
+}
+#label_6_9_11:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-rozwoj.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
+}
+
+.image-contanier-bacground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #232941;
+  background: linear-gradient(180deg, rgba(9, 9, 121, 0) 50%, #232941 120%);
+  border-radius: 20px;
 }
 
 /*

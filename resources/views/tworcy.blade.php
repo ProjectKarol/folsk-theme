@@ -15,55 +15,91 @@
 
           @php
           // WP_User_Query arguments
-          $args = array(
-            'role'           => 'Author',
-            'orderby'        => 'post_count',
+          $args = array (
+            'post_type'              => array( 'influencerzy' ),
+            'post_status'            => array( 'publish' ),
+            'nopaging'               => true,
+            'order'                  => 'ASC',
+            'orderby'                => 'menu_order',
           );
 
-          // The User Query
-          $user_query = new WP_User_Query( $args );
-
-        @endphp
-
-          @if ( ! empty( $user_query->results ) )
-            @foreach ( $user_query->results as $user )
-                @foreach ( get_user_meta( $user -> ID , 'slim_image_gf' ) as $userAvatar )
-
-                  <div class="col-sm-4" >
-                    <a href="/author/{{ $user -> data -> user_nicename}}">
-                  <div class="image-conteanier" style=" background: url('{{$userAvatar}}') no-repeat;">
-                @endforeach
 
 
-                          @foreach ( get_user_meta( $user -> ID , 'kategorie_tworczosci_gf' ) as $kategoria )
-                                @php $kategoriearray = explode( ',', $kategoria ) @endphp
-                              @foreach ($kategoriearray as $categoryitem)
-                                  {{-- {{vdump($categoryitem )}} --}}
-                                  <div class="category-box">
-                                    <div class="box-item {{$categoryitem}}">
-
-                                    </div>
-                                    {{$categoryitem}}
-                                </div>
-                              @endforeach
-
-                          @endforeach
+// The Query
+$services = new WP_Query( $args );
 
 
-                    </div> <!-- image-conteanier-->
-                      <h2>{{$user -> data -> user_nicename}}</h2>
+@endphp
 
-                      {{-- {{vdump( $user )}} --}}
-                      {{-- {{vdump(get_user_meta( $user -> ID  ))}} --}}
-                    </a>
-              </div> <!-- col-sm-4-->
+@if ($services->have_posts())
 
-            @endforeach
-              @else
-              <h2>no users</h2>
-          @endif
+@while ($services->have_posts())
+{{$services->the_post()}}
+<div class="col-sm-4" >
+  <a href="{{get_permalink()}}">
+
+  <div class="image-conteanier" style=" background: url('{{get_the_post_thumbnail_url(get_the_ID(),'carouser_image')}}') no-repeat; background-size: cover;">
+    <div class="image-contanier-bacground"></div>
+
+@php
+// global $post;
+// $terms = wp_get_post_terms($post->ID, 'rodzaj');
+// if ($terms) {
+//     $output = array();
+//     foreach ($terms as $term) {
+//         $output[] = $term->name ;
+//     }
+//     vdump($output);
+//     echo join( ', ', $output );
+// }
+
+ @endphp
+
+@php global $post;
+$terms = wp_get_post_terms($post->ID, 'rodzaj'); @endphp
+
+@foreach ( $terms  as $kategoria )
 
 
+  {{-- {{vdump($categoryitem )}} --}}
+  <div class="category-box">
+    <div class="box-item  {{$kategoria-> name}}">
+
+    </div>
+    {{$kategoria-> name}}
+
+</div>
+
+
+@endforeach
+
+                {{-- {{vdump($categoryitem )}} --}}
+                {{-- <div class="category-box">
+                  <div class="box-item ">
+
+                  </div>
+
+              </div> --}}
+
+
+
+
+
+  </div> <!-- image-conteanier-->
+
+<h2>{{the_title()}}</h2>
+
+    {{-- {{vdump( $user )}} --}}
+    {{-- {{vdump(get_user_meta( $user -> ID  ))}} --}}
+  </a>
+</div> <!-- col-sm-4-->
+@endwhile
+
+@else
+
+@endif
+
+@php wp_reset_postdata(); @endphp
 
 
         {!! get_the_posts_navigation() !!}

@@ -14,9 +14,9 @@
 
 
           <div class="col-md-6">
-          <h1>CREATORS <br> <span style="color:white;">that influence</span></h1>
+          <h1 data-aos="zoom-in">CREATORS <br> <span style="color:white;">that influence</span></h1>
 
-          <p>Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+          <p data-aos="zoom-in">Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
             </p>
           </div>
           <div class="col-md-6">
@@ -33,9 +33,9 @@
 
 
       <div class="col-md-6">
-      <h1>CREATORS <br> <span style="color:white;">that influence</span></h1>
+      <h1 data-aos="zoom-in">CREATORS <br> <span style="color:white;">that influence</span></h1>
 
-      <p>Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+      <p data-aos="zoom-in">Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
         </p>
       </div>
       <div class="col-md-6">
@@ -50,19 +50,19 @@
 <div class="rozpocznij">
 <div class="container">
   <div class="row text-center center-block justify-content-between">
-    <div class="intro col-md-4 col-md-offset-2 firs-intro"><h3>Twórcy</h3>
+    <div class="intro col-md-4 col-md-offset-2 firs-intro" data-aos="zoom-in"><h3>Twórcy</h3>
       <img
       src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box1.png"
       alt="Komputer"/>
-    <p>Znajdziemy dla Ciebie najlepszych Twórców i spełniających Twoje biznesowe i wizerunkowe oczekiwania.</p>
+    <p >Znajdziemy dla Ciebie najlepszych Twórców i spełniających Twoje biznesowe i wizerunkowe oczekiwania.</p>
     </div>
-    <div class="intro col-md-4 col-md-offset-2"><h3>Pomysł</h3>
+    <div class="intro col-md-4 col-md-offset-2" data-aos="zoom-in"><h3>Pomysł</h3>
       <img
       src="{{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box2.png"
       alt="Komputer"/>
       <p>Dzięki nieszablonowemu myśleniu przeprowadzimy efektywną i angażującą kampanię!</p>
     </div>
-    <div class="intro col-md-4"><h3>Realizacja</h3>
+    <div class="intro col-md-4" data-aos="zoom-in"><h3>Realizacja</h3>
       <img
       src="{{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box3.png"
       alt="Komputer"/>
@@ -75,73 +75,75 @@
 
 <div class="text-center">
 
-  <a class="btn-effect center" href="/jak-dzialamy" target="_self" rel="nofollow noopener">Rozpocznij</a>
+  <a class="btn-effect center" href="/jak-dzialamy" target="_self" rel="nofollow noopener" data-aos="zoom-in">Dowiedz się więcej</a>
 </div>
 
 
 </div>
 <div class="tworcy">
-<div class="container">
+<div class="container" >
 
-  <h2>Twórcy</h2>
+  <h2 data-aos="zoom-in">Twórcy</h2>
   @php
 // WP_Query arguments
 $args = array(
-            'role'           => 'Author',
-            'orderby'        => 'post_count',
-          );
+	'post_type'                   => 'influencerzy',
+	'post_status'            => array( 'publish' ),
+);
 
 // The Query
-$user_query = new WP_User_Query( $args );
+$user_query = new WP_Query( $args );
 // The Loop
 @endphp
+@if ($user_query->have_posts())
+    <div class="gallery main-carousel" data-aos="zoom-in">
 
-@if ( ! empty( $user_query->results )  )
-<div class="gallery main-carousel">
-  @foreach ( $user_query->results as $user )
-  <a href="/author/{{ $user -> data -> user_nicename}}">
-  @foreach ( get_user_meta( $user -> ID , 'slim_image_gf' ) as $userAvatar )
+      @while( $user_query->have_posts() )
+      {{$user_query->the_post()}}
+    <a href="{{get_permalink()}}">
 
-<div class="gallery-cell" style="background-image: url('{{$userAvatar}}'); background-size: cover;">
-  @endforeach
+    <div class="gallery-cell" style="background-image: url('{{get_the_post_thumbnail_url(get_the_ID(),'carouser_image')}}'); background-size: cover;">
 
+        <div class="icons-talens">
+          @php global $post;
 
-  @foreach ( get_user_meta( $user -> ID , 'kategorie_tworczosci_gf' ) as $kategoria )
-  @php $kategoriearray = explode( ',', $kategoria ) @endphp
-  <div class="icons-talens">
-@foreach ($kategoriearray as $categoryitem)
-    {{-- {{vdump($categoryitem )}} --}}
-    <div class="category-box">
-      <div class="box-item {{$categoryitem}}">
+          $terms = wp_get_post_terms($post->ID, 'rodzaj'); @endphp
+          @foreach ( $terms  as $kategoria )
+          <div class="category-box">
+            <div class="box-item {{$kategoria-> name}}">
 
-      </div>
-       <span>{{$categoryitem}}</span>
-  </div>
-@endforeach
+            </div>
+             <span>{{$kategoria-> name}}</span>
+        </div>
+        @endforeach
 
-</div>
-</a>
-@endforeach
+        </div> <!-- icons-talens -->
 
+      <h3>{{the_title()}}  </h3>
+    </a>
+    </div> <!-- gallery-cell-->
 
-
-  <h3>{{$user -> data -> user_nicename}}  </h3>
-</div>
-
-
-
-
-@endforeach
-</div>
+    @endwhile
+    </div> <!-- galerry main carousel -->
 @else
-<p>nie znaleziono twóców</p>
-@endif
 
+@endif
 @php
+// The Loop
+// if ( $query->have_posts() ) {
+// 	while ( $query->have_posts() ) {
+// 		$query->the_post();
+//     // do something
+//     echo "tets";
+// 	}
+// } else {
+// 	// no posts found
+// }
+
 // Restore original Post Data
 wp_reset_postdata();
 @endphp
-<div class="text-center">
+<div class="text-center" data-aos="zoom-in">
 
   <a class="btn-effect center" href="/tworcy/" target="_self" rel="nofollow noopener">Zobacz wszystkich</a>
 </div>
@@ -155,11 +157,11 @@ wp_reset_postdata();
         <div class="info-header">
         <img
         src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-jestestworca.png"
-        alt="Jeseś twórcą"/>
-         <h2> <span style="color:#385071;">Jesteś </span> <br> <span class="theme-orange-color">twórcą ?</span> </h2>
+        alt="Jeseś twórcą" data-aos="zoom-in"/>
+         <h2 data-aos="zoom-in"> <span style="color:#385071;">Jesteś </span> <br> <span class="theme-orange-color">twórcą ?</span> </h2>
 
         </div>
-      <p>Zapraszamy do współpracy wszystkich twórców internetowych, którzy poprzez działanie w mediach społecznościowych tworzą ciekawe i angażujące treści i chcą to wykorzystać przy współpracach marketingowych.
+      <p data-aos="zoom-in">Zapraszamy do współpracy wszystkich twórców internetowych, którzy poprzez działanie w mediach społecznościowych tworzą ciekawe i angażujące treści i chcą to wykorzystać przy współpracach marketingowych.
         Dołącz do naszej agencji klikając w przycisk poniżej.
       </p>
       <a class="btn-effect center" href="/dolacz/" target="_self" rel="nofollow noopener">Dołącz do twórców</a>
@@ -168,10 +170,10 @@ wp_reset_postdata();
         <div class="info-header">
           <img
           src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-marka.png"
-          alt="Jeseś twórcą"/>
-        <h2><span style="color:#385071;">Jesteś marką i</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
+          alt="Jeseś twórcą" data-aos="zoom-in"/>
+        <h2 data-aos="zoom-in"><span style="color:#385071;">Jesteś marką i</span> <br> <span class="theme-orange-color">szukasz twórcy ?</span></h2>
         </div>
-        <p >Jeśli potrzebujesz uatrakcyjnić działania marketingowe twojej firmy, zgłoś się do nas z zapytaniem o współpracę.  Razem ustalimy wspólne działania które pomogą dotrzeć do jak największej liczby potencjalnych klientów/odbiorców.</p>
+        <p data-aos="zoom-in">Jeśli chcesz zaistnieć w social mediach i dotrzeć do swoich klientów przez nowoczesną formę komunikacji, napisz do nas i sprawdź nas - Folks oraz naszych twórców.</p>
       <a class="btn-effect center" href="/dolacz/#regise" target="_self" rel="nofollow noopener">Rozpocznij współpracę</a>
     </div>
     </div>

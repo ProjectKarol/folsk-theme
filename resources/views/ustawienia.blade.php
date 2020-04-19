@@ -39,7 +39,7 @@
         <p style=" font-size:18px;">Foks nie ma dla nas rzeczy niemożliwych. Oferujemy kompleksową obsługę - od wyboru twórców i nawiązanie współpracy, przez realizację kampanii, do zmierzenia efektów w raporcie.
 
         </p>
-        <p style="font-weight:bold; color:##2b3050;">Napisz na <span style="color:#ff6251 ;">kontakt@folks.pl</span> i sprawdź co potrafimy</p>
+        <p style="font-weight:bold; color:##2b3050;">Napisz na <span style="color:#ff6251 ;"><a href="mailto:kontakt@folks.pl">kontakt@folks.pl</a></span> i sprawdź co potrafimy</p>
           </div>
         </div>
       </div>

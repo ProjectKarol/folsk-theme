@@ -27,8 +27,8 @@
 
           <hr>
           <h2>Kontakt</h2>
-          <p>Telefon: <span>(22) 392 95 85</span></p>
-          <p>Email: <span>kontakt@folks.pl</span></p>
+          <p>Telefon:  <a href="tel:+48223929585"><span>(22) 392 95 85</span></a></p>
+          <p>Email: <a href="mailto:kontakt@folks.pl"><span>kontakt@folks.pl</span></a></p>
         </div>
       </div>
       </div>

@@ -10,8 +10,8 @@
     <form class="lwa-form" action="<?php echo esc_url(LoginWithAjax::$url_login); ?>" method="post">
         <div>
             <span class="lwa-status"></span>
-            <label>Nazwa</label>
-            <input type="text" name="log" placeholder='example@exsample.pl' />
+            <label>login (email)</label>
+            <input type="text" name="log" />
 
             <label style="margin-top:10px;">Hasło</label>
             <input type="password" name="pwd" />
@@ -37,7 +37,7 @@
                         <?php if( !empty($lwa_data['remember']) ): ?>
                         <a class="lwa-links-remember" href="<?php echo esc_attr(LoginWithAjax::$url_remember); ?>"
                             title="<?php esc_attr_e('Password Lost and Found','login-with-ajax') ?>">Zapomniałeś
-                            Hasła</a>
+                            Hasła?</a>
                         <?php endif; ?>
                         <?php if ( get_option('users_can_register') && !empty($lwa_data['registration']) ) : ?>
                         <br />
@@ -57,7 +57,7 @@
             <table>
                 <tr>
                     <td>
-                        <strong>Zapomniałeś(aś) hasła </strong>
+                        <strong>Zapomniałeś(aś) hasła?</strong>
                     </td>
                 </tr>
                 <tr>

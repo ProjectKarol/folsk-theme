@@ -10,3 +10,8 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
+
+import AOS from 'aos';
+//import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();

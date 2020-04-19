@@ -106,3 +106,78 @@ Container::getInstance()
             return $user_id;
         return $value;
     }
+
+
+
+
+    add_filter('acf/validate_value/name=kategorie_tworczosci', 'my_validate_value', 10, 4);
+    function my_validate_value($valid, $value, $field, $input) {
+
+        if(!$valid) {
+            return $valid;
+        }
+
+        if(sizeof($value) > 3) {
+            $valid = 'Możesz wybrać tylko max 3 kategorie';
+        } else {
+            $valid = true;
+        }
+
+        return $valid;
+
+    }
+
+
+    // form as draft
+
+
+function create_post_as_draft( $post_data ) {
+    // Set post status to draft
+    $post_data['post_status'] = 'draft';
+
+    return $post_data;
+}
+add_filter( 'af/form/editing/post_data/key=form_5e5143d80de43', 'create_post_as_draft', 10, 1 );
+
+
+function wp_add_upload_files_cap() {
+    $role = get_role( 'author' ); //The role you want to grant the capability
+    $role->add_cap( 'upload_files' );
+    $role->add_cap( 'edit_pages' );
+    $role->add_cap( 'edit_posts' );
+}
+register_activation_hook( __FILE__, 'wp_add_upload_files_cap' );
+
+
+
+// requed
+add_filter('acf/validate_value/name=facebook-acf', 'my_acf_validate_value', 10, 4);
+add_filter('acf/validate_value/name=instagram-acf', 'my_acf_validate_value', 10, 4);
+add_filter('acf/validate_value/name=youtube-acf', 'my_acf_validate_value', 10, 4);
+add_filter('acf/validate_value/name=snapchat-acf', 'my_acf_validate_value', 10, 4);
+add_filter('acf/validate_value/name=twitter-acf', 'my_acf_validate_value', 10, 4);
+add_filter('acf/validate_value/name=linkedin-acf', 'my_acf_validate_value', 10, 4);
+
+function my_acf_validate_value( $valid, $value, $field, $input ){
+
+	// bail early if value is already invalid
+	if( !$valid ) {
+		return $valid;
+	}
+        // get two values
+        // you need to change these based on your field keys
+	    $value_1 = $_POST['acf']['field_5e386986d60d3'];
+        $value_2 = $_POST['acf']['field_5e38721b0b596'];
+        $value_3 = $_POST['acf']['field_5e3872320b597'];
+        $value_4 = $_POST['acf']['field_5e3872430b598'];
+        $value_5 = $_POST['acf']['field_5e38725c0b599'];
+        $value_6 = $_POST['acf']['field_5e38726a0b59a'];
+
+	if (empty($value_1) && empty($value_2) &&  empty($value_3) &&  empty($value_4) &&  empty($value_5)  &&  empty($value_6))   {
+            $valid = 'Musisz wypełnić przynajmniej jedno pole.';
+        }
+	// return
+	return $valid;
+
+
+}
