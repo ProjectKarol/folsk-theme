@@ -71,7 +71,9 @@
                 ?>
 
                 <a href="/dolacz/">Edytuj Profil</a><br>
-                <a href="/author/'<?php echo $user -> data -> user_login ?>'">Podejrzyj profil</a> <br>
+                <?php if(get_user_last_influecer_slug()){?>
+                <a href="/influencerzy/<?php echo get_user_last_influecer_slug()  ?>">Podejrzyj profil</a> <br>
+                <?php } ?>
                 <a href="/ustwienia/">Ustawienia</a>
             </td>
         </tr>
