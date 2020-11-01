@@ -150,34 +150,63 @@ register_activation_hook( __FILE__, 'wp_add_upload_files_cap' );
 
 
 
-// requed
-add_filter('acf/validate_value/name=facebook-acf', 'my_acf_validate_value', 10, 4);
-add_filter('acf/validate_value/name=instagram-acf', 'my_acf_validate_value', 10, 4);
-add_filter('acf/validate_value/name=youtube-acf', 'my_acf_validate_value', 10, 4);
-add_filter('acf/validate_value/name=snapchat-acf', 'my_acf_validate_value', 10, 4);
-add_filter('acf/validate_value/name=twitter-acf', 'my_acf_validate_value', 10, 4);
-add_filter('acf/validate_value/name=linkedin-acf', 'my_acf_validate_value', 10, 4);
+// // requed
+// add_filter('acf/validate_value/name=facebook-acf', 'my_acf_validate_value', 10, 4);
+// add_filter('acf/validate_value/name=instagram-acf', 'my_acf_validate_value', 10, 4);
+// add_filter('acf/validate_value/name=youtube-acf', 'my_acf_validate_value', 10, 4);
+// add_filter('acf/validate_value/name=snapchat-acf', 'my_acf_validate_value', 10, 4);
+// add_filter('acf/validate_value/name=twitter-acf', 'my_acf_validate_value', 10, 4);
+// add_filter('acf/validate_value/name=linkedin-acf', 'my_acf_validate_value', 10, 4);
 
-function my_acf_validate_value( $valid, $value, $field, $input ){
+// function my_acf_validate_value( $valid, $value, $field, $input ){
 
-	// bail early if value is already invalid
-	if( !$valid ) {
-		return $valid;
-	}
-        // get two values
-        // you need to change these based on your field keys
-	    $value_1 = $_POST['acf']['field_5e386986d60d3'];
-        $value_2 = $_POST['acf']['field_5e38721b0b596'];
-        $value_3 = $_POST['acf']['field_5e3872320b597'];
-        $value_4 = $_POST['acf']['field_5e3872430b598'];
-        $value_5 = $_POST['acf']['field_5e38725c0b599'];
-        $value_6 = $_POST['acf']['field_5e38726a0b59a'];
+// 	// bail early if value is already invalid
+// 	if( !$valid ) {
+// 		return $valid;
+// 	}
+//         // get two values
+//         // you need to change these based on your field keys
+// 	    $value_1 = $_POST['acf']['field_5e386986d60d3'];
+//         $value_2 = $_POST['acf']['field_5e38721b0b596'];
+//         $value_3 = $_POST['acf']['field_5e3872320b597'];
+//         $value_4 = $_POST['acf']['field_5e3872430b598'];
+//         $value_5 = $_POST['acf']['field_5e38725c0b599'];
+//         $value_6 = $_POST['acf']['field_5e38726a0b59a'];
 
-	if (empty($value_1) && empty($value_2) &&  empty($value_3) &&  empty($value_4) &&  empty($value_5)  &&  empty($value_6))   {
-            $valid = 'Musisz wypełnić przynajmniej jedno pole.';
-        }
-	// return
-	return $valid;
+// 	if (empty($value_1) && empty($value_2) &&  empty($value_3) &&  empty($value_4) &&  empty($value_5)  &&  empty($value_6))   {
+//             $valid = 'Musisz wypełnić przynajmniej jedno pole.';
+//         }
+// 	// return
+// 	return $valid;
+// }
 
 
+// force basic uploader for a certain field
+function my_acf_force_basic_uploader( $field ) {
+
+    // don't do this on the backend
+    if(is_admin()) return $field;
+
+    // set the uploader setting before rendering the field
+    acf_update_setting('uploader', 'basic');
+
+    // return the field data
+    return $field;
+
+}
+
+// target the field using its name
+add_filter('acf/prepare_field/name=_thumbnail_id', 'my_acf_force_basic_uploader');
+
+
+if ( is_user_logged_in() && is_admin() ) {
+    global $current_user;
+    get_currentuserinfo();
+    $user_info = get_userdata($current_user->ID);
+    $roles = $user_info->roles;
+    // ddd($user_info->roles);
+    if ( in_array("author", $roles) )
+    {
+        header( 'Location: '.get_bloginfo('home').'/dolacz/?redirect='.get_bloginfo('home').'/wp-admin/' );
+    }
 }

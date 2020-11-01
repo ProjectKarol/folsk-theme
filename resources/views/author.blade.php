@@ -138,7 +138,9 @@
                @endif
 
                 <!-- end social link -->
-               @php $havefb = get_user_meta($curauth -> ID , 'social_profile_ln', true); @endphp
+              @php $linkedind = get_field('linkedin');  @endphp
+              @php ddd($linkedind) @endphp
+               @php $havefb = get_user_meta($curauth -> ID , $linkedind['social_profile_ln'], true); @endphp
                @if ($havefb)
                    <a class="icon linked-in" href="{{$havefb}}" title="LinkdeIn">
                      <div class="ir">

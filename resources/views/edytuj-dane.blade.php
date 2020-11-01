@@ -40,7 +40,7 @@
         $author_last_post_id = $author_posts->posts[0]->ID;
         @endphp
             @if ($author_posts->have_posts())
-              @php advanced_form( 'form_5e5143d80de43', array( 'post' => $author_last_post_id , 'submit_text' => 'Zapisz', ) ) ; @endphp
+              @php advanced_form( 'form_5e5143d80de43', array( 'post' => $author_last_post_id , 'uploader’ => ‘basic', 'submit_text' => 'Zapisz', ) ) ; @endphp
             @else
               @php advanced_form( 'form_5e5143d80de43' , array(  'submit_text' => 'Dołącz', )) ; @endphp
             @endif

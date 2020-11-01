@@ -76,12 +76,12 @@
       padding-left: 75px;
       text-indent: -32px;
     }
-    p::before {
-      content: url('../images/logo-icon.png'); /* with class ModalCarrot ??*/
-      position: relative; /*or absolute*/
-      top: 20px;
-      left: -15px;
-    }
+    // p::before {
+    //   content: url('../images/logo-icon.png'); /* with class ModalCarrot ??*/
+    //   position: relative; /*or absolute*/
+    //   top: 20px;
+    //   left: -15px;
+    // }
 
     .social-media {
       background-color: white;

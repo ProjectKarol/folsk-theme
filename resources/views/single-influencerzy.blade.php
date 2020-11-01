@@ -47,7 +47,7 @@
       </div>
 
   </div>
-  {{-- <iframe style="min-width: 100%;" src="http://folks.loc:3000/"></iframe> --}}
+  {{-- <iframe style="min-width: 100%;" src="http://folks.loc:3000/wp-content/plugins/react-plugin/widget/build"></iframe> --}}
   @php echo do_shortcode( "[erw_widget]") @endphp
 
 
@@ -65,8 +65,12 @@
           <h2>Social Media</h2>
 
           <div class="social-links">
-              @if (get_field('facebook-acf'))
-                  <a class="icon facebook" href="{{get_field('facebook-acf')}}" title="Facebook">
+            @php
+            $facebook = get_field('facebook');
+            $linkfacebook = $facebook['facebook-acf'];
+            @endphp
+              {{-- @if (get_field('facebook-acf')) --}}
+                  <a class="icon facebook" href="{{$linkfacebook}}" title="Facebook">
                     <div class="ir">
                         <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
                             <path
@@ -76,12 +80,16 @@
                         <span>Facebook</span>
                     </div>
                 </a>
-              @endif
+              {{-- @endif --}}
                <!-- end social link -->
 
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_in', true); @endphp
-               @if (get_field('instagram-acf'))
-                   <a class="icon instagram" href="{{get_field('instagram-acf')}}" title="instagram">
+               @php
+               $instagram = get_field('instagram');
+               $linkinstagram = $instagram['instagram-acf'];
+               @endphp
+               {{-- @if (get_field('instagram-acf')) --}}
+                   <a class="icon instagram" href="{{$linkinstagram}}" title="instagram">
                     <div class="ir">
                     <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
                       <path
@@ -95,11 +103,15 @@
                          <span>Instagram</span>
                      </div>
                  </a>
-               @endif
+               {{-- @endif --}}
                 <!-- end social link -->
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_yt', true); @endphp
-               @if (get_field('youtube-acf')	)
-                   <a class="icon facebook" href="{{get_field('youtube-acf')	}}" title="Youtube">
+               @php
+               $youtube = get_field('youtube');
+               $linkyoutube = $youtub['youtube-acf'];
+               @endphp
+               {{-- @if (get_field('youtube-acf')	) --}}
+                   <a class="icon facebook" href="{{$linkyoutube}}" title="Youtube">
                      <div class="ir">
                       <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
                         <path
@@ -109,22 +121,30 @@
                          <span>YouTube</span>
                      </div>
                  </a>
-               @endif
+               {{-- @endif --}}
                 <!-- end social link -->
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_sn', true); @endphp
-               @if (get_field('snapchat-acf')	)
-                   <a class="icon facebook" href="{{get_field('snapchat-acf')	}}" title="SnapChat">
+               @php
+               $snapchat = get_field('snapchat');
+               $linksnapchat = $snapchat['snapchat-acf'];
+               @endphp
+               {{-- @if (get_field('snapchat-acf')	) --}}
+                   <a class="icon facebook" href="{{$linksnapchat}}" title="SnapChat">
                      <div class="ir">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.829 4.533c-.6 1.344-.363 3.752-.267 5.436-.648.359-1.48-.271-1.951-.271-.49 0-1.075.322-1.167.802-.066.346.089.85 1.201 1.289.43.17 1.453.37 1.69.928.333.784-1.71 4.403-4.918 4.931-.251.041-.43.265-.416.519.056.975 2.242 1.357 3.211 1.507.099.134.179.7.306 1.131.057.193.204.424.582.424.493 0 1.312-.38 2.738-.144 1.398.233 2.712 2.215 5.235 2.215 2.345 0 3.744-1.991 5.09-2.215.779-.129 1.448-.088 2.196.058.515.101.977.157 1.124-.349.129-.437.208-.992.305-1.123.96-.149 3.156-.53 3.211-1.505.014-.254-.165-.477-.416-.519-3.154-.52-5.259-4.128-4.918-4.931.236-.557 1.252-.755 1.69-.928.814-.321 1.222-.716 1.213-1.173-.011-.585-.715-.934-1.233-.934-.527 0-1.284.624-1.897.286.096-1.698.332-4.095-.267-5.438-1.135-2.543-3.66-3.829-6.184-3.829-2.508 0-5.014 1.268-6.158 3.833z" /></svg>
                          <span>SnapChat</span>
                      </div>
                  </a>
-               @endif
+               {{-- @endif --}}
 
                 <!-- end social link -->
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_tw', true); @endphp
-               @if (get_field('twitter-acf'))
-                   <a class="icon twitter" href="{{get_field('twitter-acf')}}" title="Twitter">
+               @php
+               $twitter = get_field('twitter');
+               $linktwitter = $twitter['twitter-acf'];
+               @endphp
+               {{-- @if (get_field('twitter-acf')) --}}
+                   <a class="icon twitter" href="{{$linktwitter}}" title="Twitter">
                      <div class="ir">
                       <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
                         <path
@@ -134,18 +154,23 @@
                          <span>Twitter</span>
                      </div>
                  </a>
-               @endif
+               {{-- @endif --}}
 
                 <!-- end social link -->
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_ln', true); @endphp
-               @if (get_field('linkedin-acf'))
-                   <a class="icon linked-in" href="{{get_field('linkedin-acf')}}" title="LinkdeIn">
+               @php
+                   $linkedind = get_field('linkedin');
+               @endphp
+               @php $linkLindedIn = $linkedind['linkedin-acf'] @endphp
+               @php $havefb = get_user_meta($curauth -> ID , $linkedind['social_profile_ln'], true); @endphp
+               {{-- @if (get_field('linkedin-acf')) --}}
+                   <a class="icon linked-in" href="{{$linkLindedIn}}" title="LinkdeIn">
                      <div class="ir">
                       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="-5 -2 35 35"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
                          <span>LinkedIn</span>
                      </div>
                  </a>
-               @endif
+               {{-- @endif --}}
                 <!-- end social link -->
 
           </div>
