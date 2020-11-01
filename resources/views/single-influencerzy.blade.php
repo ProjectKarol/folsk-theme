@@ -31,12 +31,14 @@
                     @php global $post;
                     $terms = wp_get_post_terms($post->ID, 'rodzaj'); @endphp
                     @foreach ( $terms  as $kategoria )
+                    {{-- {{ ddd( $kategoria->slug )}} --}}
+                  <a href='{{get_bloginfo('home')}}/rodzaj/{{$kategoria->slug }}'>
                     <div class="category-box">
                       <div class="box-item {{$kategoria-> name}}">
-
                       </div>
                        <span>{{$kategoria-> name}}</span>
-                  </div>
+                    </div>
+                  </a>
                   @endforeach
                   </div>
 
