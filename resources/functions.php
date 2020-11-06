@@ -178,9 +178,22 @@ function my_acf_validate_value( $valid, $value, $field, $input ){
 	if (empty($value_1) && empty($value_2) &&  empty($value_3) &&  empty($value_4) &&  empty($value_5)  &&  empty($value_6))   {
             $valid = 'Musisz wypełnić przynajmniej jedno pole.';
         }
+
 	// return
 	return $valid;
 }
+
+//youtube validate fiels
+add_filter('acf/validate_value/name=youtube-acf', 'acf_validate_facebook', 10, 4);
+function acf_validate_facebook($valid, $value, $field, $input){
+    $value_3 = $_POST['acf']['field_5f9c54501f3ca']['field_5e3872320b597'];//youtube
+    if ($value_3  !=  strpos($value_3, "youtube.com/channel") ) {
+        $valid ="Musisz podać Kanał , niedozwolone jest konto użytkownika";
+    }
+	// return
+	return $valid;
+}
+
 
 
 // force basic uploader for a certain field
