@@ -59,7 +59,24 @@
         <div class="col-md-8">
 
 
-          <p> <?php echo get_post_field('post_content', $post->ID); ?></p>
+
+
+            {{-- @if( have_rows('dlugi_opis_pole_powtarzalne') ):
+                @while( have_rows('dlugi_opis_pole_powtarzalne') ) : the_row();
+                  {{ $sub_value = get_sub_field('dlugi_opis')}}
+                @endwhile;
+            @else :
+            @endif; --}}
+            @if( have_rows('dlugi_opis_pole_powtarzalne') )
+            @php while( have_rows('dlugi_opis_pole_powtarzalne') ) : the_row(); @endphp
+             <p> {{ get_sub_field('dlugi_opis')}} </p>
+           @php endwhile; @endphp
+
+            @else
+
+            @endif
+
+
 
         </div>
         <div class="col-md-4 social-media">
