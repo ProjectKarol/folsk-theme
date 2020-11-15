@@ -88,7 +88,7 @@
             $facebook = get_field('facebook');
             $linkfacebook = $facebook['facebook-acf'];
             @endphp
-              @if (get_field('facebook-acf'))
+              @if ($linkfacebook)
                   <a class="icon facebook" href="{{$linkfacebook}}" title="Facebook">
                     <div class="ir">
                         <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
