@@ -44,6 +44,7 @@
             @else
               @php advanced_form( 'form_5e5143d80de43' , array(  'submit_text' => 'Dołącz', )) ; @endphp
             @endif
+            @php  the_content(); @endphp
         @else
         {{gravity_form( 4, false, false, false, '', false )}}
         <hr>
