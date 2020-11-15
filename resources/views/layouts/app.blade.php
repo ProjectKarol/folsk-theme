@@ -1,3 +1,4 @@
+@php acf_form_head() @endphp
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
