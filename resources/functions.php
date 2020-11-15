@@ -110,14 +110,14 @@ Container::getInstance()
 // Validations
 require dirname(__DIR__).'/resources/setting/validation.php';
 
-//     // form as draft
-// function create_post_as_draft( $post_data ) {
-//     // Set post status to draft
-//     $post_data['post_status'] = 'draft';
+    // form as draft
+function create_post_as_draft( $post_data ) {
+    // Set post status to draft
+    $post_data['post_status'] = 'draft';
 
-//     return $post_data;
-// }
-// add_filter( 'af/form/editing/post_data/key=form_5e5143d80de43', 'create_post_as_draft', 10, 1 );
+    return $post_data;
+}
+add_filter( 'af/form/editing/post_data/key=form_5e5143d80de43', 'create_post_as_draft', 10, 1 );
 
 
 function wp_add_upload_files_cap() {

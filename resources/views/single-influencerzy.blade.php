@@ -88,7 +88,7 @@
             $facebook = get_field('facebook');
             $linkfacebook = $facebook['facebook-acf'];
             @endphp
-              {{-- @if (get_field('facebook-acf')) --}}
+              @if (get_field('facebook-acf'))
                   <a class="icon facebook" href="{{$linkfacebook}}" title="Facebook">
                     <div class="ir">
                         <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
@@ -99,7 +99,7 @@
                         <span>Facebook</span>
                     </div>
                 </a>
-              {{-- @endif --}}
+              @endif
                <!-- end social link -->
 
                @php $havefb = get_user_meta($curauth -> ID , 'social_profile_in', true); @endphp
