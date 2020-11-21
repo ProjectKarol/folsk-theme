@@ -68,6 +68,29 @@ a:hover {
   }
 }
 
+//biznes
+.biznes {
+  mask-image: url('../images/svg-xxx/ikona-biznes.svg');
+}
+#label_6_9_8:after {
+  display: block;
+  content: ' ';
+  background-image: url('../images/svg-xxx/ikona-biznes.svg');
+  background-size: 70px 70px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  &:hover {
+    color: wheat;
+  }
+}
+
+//finance
+.finanse {
+  mask-image: url('../images/svg-xxx/ikona-finanse.svg');
+}
+
+// podroze
 .podróże {
   mask-image: url('../images/svg-xxx/ikona-podroze.svg');
 }
@@ -205,7 +228,7 @@ a:hover {
 }
 
 .technologia {
-  background-image: url('../images/svg-white/ikona-domiogrod.svg');
+  mask-image: url('../images/svg-xxx/ikona-technologia.svg');
 }
 #label_6_9_14:after {
   display: block;

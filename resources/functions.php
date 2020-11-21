@@ -154,17 +154,17 @@ function handle_form_redirect() {
 
 
 // redirect i not admin
-if ( is_user_logged_in() && is_admin() ) {
-    global $current_user;
-    get_currentuserinfo();
-    $user_info = get_userdata($current_user->ID);
-    $roles = $user_info->roles;
-    // ddd($user_info->roles);
-    if ( in_array("author", $roles) )
-    {
-        header( 'Location: '.get_bloginfo('home').'/dolacz/?redirect='.get_bloginfo('home').'/wp-admin/' );
-    }
-}
+// if ( is_user_logged_in() && is_admin() ) {
+//     global $current_user;
+//     get_currentuserinfo();
+//     $user_info = get_userdata($current_user->ID);
+//     $roles = $user_info->roles;
+//     // ddd($user_info->roles);
+//     if ( in_array("author", $roles) )
+//     {
+//         header( 'Location: '.get_bloginfo('home').'/dolacz/?redirect='.get_bloginfo('home').'/wp-admin/' );
+//     }
+// }
 
 
 

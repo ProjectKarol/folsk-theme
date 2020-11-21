@@ -76,8 +76,9 @@ export default {
 
     const validateFunction = () => {
       const submitButton = document.querySelector('.acf-form-submit button');
-
+      const XHR = new XMLHttpRequest();
       submitButton.addEventListener('click', (e) => {
+        XHR.setRequestHeader('X-WP-Nonce', 'universityData.nonce')
         if (category.length === 0) {
           categoryErrorDiv.style.display = 'block';
           e.preventDefault();
