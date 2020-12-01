@@ -1,10 +1,12 @@
 $color: white;
 a.btn-effect,
+[type='submit'],
 .af-submit-button {
   text-decoration: none;
 }
 .btn-effect,
 input #gform_submit_button_4,
+[type='submit'],
 .af-submit-button {
   display: inline-block;
   border-radius: 0.4rem;
@@ -52,6 +54,16 @@ input #gform_submit_button_4,
 
 a .btn-effect:hover {
   cursor: pointer;
+}
+
+[type='submit'] {
+  background-color: white;
+  border: solid 1px $theme-orange !important;
+}
+
+[type='submit']:hover {
+  background-color: $theme-orange;
+  color: white;
 }
 
 /*

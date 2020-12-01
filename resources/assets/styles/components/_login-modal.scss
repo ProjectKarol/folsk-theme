@@ -10,6 +10,8 @@
       font-weight: 700;
       font-size: 30px;
       color: $theme-dark;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
   }
   .modal-content {

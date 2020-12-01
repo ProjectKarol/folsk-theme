@@ -50,38 +50,6 @@
         </div>
     </form>
     <?php if( !empty($lwa_data['remember']) && $lwa_data['remember'] == 1 ): ?>
-    <form class="lwa-remember" action="<?php echo esc_attr(LoginWithAjax::$url_remember) ?>" method="post"
-        style="display:none;">
-        <div>
-            <span class="lwa-status"></span>
-            <table>
-                <tr>
-                    <td>
-                        <strong>Zapomniałeś(aś) hasła?</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lwa-remember-email">
-                        <?php $msg = "Wpisz nazwę użytkownika lub email"; ?>
-                        <input type="text" name="user_login" class="lwa-user-remember"
-                            value="<?php echo esc_attr($msg); ?>"
-                            onfocus="if(this.value == '<?php echo esc_attr($msg); ?>'){this.value = '';}"
-                            onblur="if(this.value == ''){this.value = '<?php echo esc_attr($msg); ?>'}" />
-                        <?php do_action('lostpassword_form'); ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lwa-remember-buttons">
-
-                        <button class="btn-effect center" type="submit" value="Zdobądź nowe hasło">Zdobądź nowe
-                            hasło</button>
-                        <a href="#" class="lwa-links-remember-cancel">Anuluj</a>
-                        <input type="hidden" name="login-with-ajax" value="remember" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
     <?php endif; ?>
     <?php if( get_option('users_can_register') && !empty($lwa_data['registration']) && $lwa_data['registration'] == 1 ): ?>
     <div class="lwa-register lwa-register-default lwa-modal" style="display:none;">

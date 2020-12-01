@@ -1,0 +1,37 @@
+.page-template-page-login .login-form {
+  p {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #2b304e;
+  }
+}
+
+.page-template-page-login {
+  #gform_4 {
+    margin: 0 auto;
+  }
+  .login-info {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+#password-lost-form {
+  .password-lost-form-title {
+    text-align: center;
+    padding-top: 20px;
+  }
+  #user_login,
+  label,
+  button {
+    min-width: 100%;
+  }
+}
+
+.page-template-edytuj-dane #gform_4 {
+  margin: 0 auto;
+}
+#rememberme {
+  min-width: auto !important;
+  margin-right: 10px;
+}

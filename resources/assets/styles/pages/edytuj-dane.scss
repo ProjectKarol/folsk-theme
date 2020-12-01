@@ -1,10 +1,12 @@
-.page-template-edytuj-dane {
+.page-template-edytuj-dane,
+.page-template-page-login {
   .dolocz-page {
     background: url('../images/dolacz-tlo.jpg') no-repeat;
     background-size: cover;
     background-clip: border-box;
     padding-top: 100px;
   }
+
   p {
     text-align: center;
   }
@@ -166,15 +168,15 @@
   // advance forms
   .acf-url input[type='url'] {
     padding-left: 37px !important;
-}
+  }
 
-div > div > i:before {
-  position:relative; /*or absolute*/
-  height: 16px; /*height of image*/
-  width: 33px;  /*width of image*/
-  position: absolute;
-  left: -5px;
-}
+  div > div > i:before {
+    position: relative; /*or absolute*/
+    height: 16px; /*height of image*/
+    width: 33px; /*width of image*/
+    position: absolute;
+    left: -5px;
+  }
   // .acf-field-5e386986d60d3 input {
   //   background: url('../images/icons/facebook-icon.png') no-repeat scroll 2px
   //     8px;
@@ -183,22 +185,22 @@ div > div > i:before {
   // }
   .acf-field-5e386986d60d3 > div > div > i:before {
     content: url('../images/icons/facebook-icon.png');
-}
+  }
   .acf-field-5e38721b0b596 > div > div > i:before {
     content: url('../images/icons/instagram.png');
-}
+  }
   .acf-field-5e3872320b597 > div > div > i:before {
     content: url('../images/icons/youtube.png');
-}
+  }
   .acf-field-5e3872430b598 > div > div > i:before {
     content: url('../images/icons/snapchat.png');
-}
+  }
   .acf-field-5e38725c0b599 > div > div > i:before {
     content: url('../images/icons/twitter.png');
-}
+  }
   .acf-field-5e38726a0b59a > div > div > i:before {
     content: url('../images/icons/linkedin.png');
-}
+  }
 
   // kategorie twórczości
   .acf-taxonomy-field {
@@ -468,30 +470,30 @@ div > div > i:before {
     }
 
     // biznes
-        li[data-id='19'] span:after {
-          background-image: url('../images/svg-xxx/ikona-biznes.svg');
-        }
-        li[data-id='19'] span:hover:after {
-          background-image: url('../images/svg-white/ikona-biznes.svg');
-        }
-        li[data-id='19'] :checked + span {
-          &:after {
-            background-image: url('../images/svg-white/ikona-biznes.svg');
-          }
-        }
+    li[data-id='19'] span:after {
+      background-image: url('../images/svg-xxx/ikona-biznes.svg');
+    }
+    li[data-id='19'] span:hover:after {
+      background-image: url('../images/svg-white/ikona-biznes.svg');
+    }
+    li[data-id='19'] :checked + span {
+      &:after {
+        background-image: url('../images/svg-white/ikona-biznes.svg');
+      }
+    }
 
-            // finanse
-        li[data-id='20'] span:after {
-          background-image: url('../images/svg-xxx/ikona-finanse.svg');
-        }
-        li[data-id='20'] span:hover:after {
-          background-image: url('../images/svg-white/ikona-finanse.svg');
-        }
-        li[data-id='20'] :checked + span {
-          &:after {
-            background-image: url('../images/svg-white/ikona-finanse.svg');
-          }
-        }
+    // finanse
+    li[data-id='20'] span:after {
+      background-image: url('../images/svg-xxx/ikona-finanse.svg');
+    }
+    li[data-id='20'] span:hover:after {
+      background-image: url('../images/svg-white/ikona-finanse.svg');
+    }
+    li[data-id='20'] :checked + span {
+      &:after {
+        background-image: url('../images/svg-white/ikona-finanse.svg');
+      }
+    }
 
     // kategory end
   }
