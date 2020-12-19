@@ -7,48 +7,13 @@
 ?>
 <div class="lwa lwa-default">
     <?php //class must be here, and if this is a template, class name should be that of template directory ?>
-    <form class="lwa-form" action="<?php echo esc_url(LoginWithAjax::$url_login); ?>" method="post">
-        <div>
-            <span class="lwa-status"></span>
-            <label>login (email)</label>
-            <input type="text" name="log" />
-
-            <label style="margin-top:10px;">Hasło</label>
-            <input type="password" name="pwd" />
-            <?php do_action('login_form'); ?>
-            <button class="btn-effect center" type="submit" name="wp-submit" id="lwa_wp-submit" value="Zaloguj się"
-                tabindex="100">Zaloguj się</button>
-            <input type="hidden" name="lwa_profile_link" value="<?php echo esc_attr($lwa_data['profile_link']); ?>" />
-            <input type="hidden" name="login-with-ajax" value="login" />
-            <?php if( !empty($lwa_data['redirect']) ): ?>
-            <input type="hidden" name="redirect_to" value="<?php echo esc_url($lwa_data['redirect']); ?>" />
-            <?php endif; ?>
-            <div class="remember-me">
-                <input name="rememberme" type="checkbox" class="lwa-rememberme" value="forever" />
-                <label>Zapamiętaj mnie</label>
+    <div class="login-form">
+        <div id="gform_4" style="margin: 0 auto;">
+            <div id="password-reset-form" class="widecolumn custom-login custom-login-popup">
+                <?php echo do_shortcode('[custom-login-form]'); ?>
             </div>
-
-            <table>
-                <tr>
-                    <td colspan="2"></td>
-                </tr>
-                <tr class="lwa-submit">
-                    <td class="lwa-submit-links">
-                        <?php if( !empty($lwa_data['remember']) ): ?>
-                        <a class="lwa-links-remember" href="<?php echo esc_attr(LoginWithAjax::$url_remember); ?>"
-                            title="<?php esc_attr_e('Password Lost and Found','login-with-ajax') ?>">Zapomniałeś
-                            Hasła?</a>
-                        <?php endif; ?>
-                        <?php if ( get_option('users_can_register') && !empty($lwa_data['registration']) ) : ?>
-                        <br />
-                        <a href="<?php echo esc_attr(LoginWithAjax::$url_register); ?>"
-                            class="lwa-links-register lwa-links-modal"><?php esc_html_e('Register','login-with-ajax') ?></a>
-                        <?php endif; ?>
-                    </td>
-                </tr>
-            </table>
         </div>
-    </form>
+    </div>
     <?php if( !empty($lwa_data['remember']) && $lwa_data['remember'] == 1 ): ?>
     <?php endif; ?>
     <?php if( get_option('users_can_register') && !empty($lwa_data['registration']) && $lwa_data['registration'] == 1 ): ?>

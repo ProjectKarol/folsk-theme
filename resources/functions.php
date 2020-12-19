@@ -110,6 +110,9 @@ Container::getInstance()
 // Validations
 require dirname(__DIR__).'/resources/setting/validation.php';
 
+// metabox
+require dirname(__DIR__).'/resources/setting/email-metabox.php';
+
     // form as draft
 function create_post_as_draft( $post_data ) {
     // Set post status to draft

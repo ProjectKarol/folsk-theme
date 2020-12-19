@@ -1,17 +1,27 @@
 // import _ from 'lodash'
+import RegisterForm from '../componets/RegisterForm';
+import trimInput from '../componets/dolacz/trim_inputs';
+import emailErrorMessage from '../componets/dolacz/errorMessages';
 export default {
   init() {
     const category = [];
+    const socialLinks = [];
     // select elements on form
     const categoriseList = document.querySelectorAll(
       'div.af-input.acf-input > div > div > ul > li input'
     );
+
     const socialMediaList = document.querySelectorAll(
       '.social-media-group input'
     );
+    const socialErrors = document.querySelector('#form_5e5143d80de43 > div > div.af-field.af-field-type-message.af-field-.acf-field.acf-field-message.acf-field-5e526cc4aaa63 > div.af-label.acf-label > label');
+
+    // const socialMediaLinks = document.querySelectorAll('.acf-field-url');
     const imageInputUploader = document.querySelector(
       '.acf-field-5e5269641b12b > div.af-input.acf-input > div input'
     );
+    const imageUploader = document.getElementById('acf-field_5e5269641b12b');
+    const submitButton = document.querySelector('.acf-form-submit button');
 
     // select error div messages
     const imageErrorDiv = document.querySelector('.custom-error-image-acf');
@@ -32,10 +42,32 @@ export default {
     const loadSocialMediaOnLoad = () => {
       for (const socialItem of socialMediaList) {
         // category.push(event.target.value);
-        console.log('socialmedia', socialItem.value);
-        // if (categoryItem.checked) {
-        //   category.push(categoryItem.value);
-        // }
+        if (socialItem.value.length > 0 ) {
+          socialLinks.push(socialItem.id);
+        }
+
+        socialItem.addEventListener('keyup', function (event) {
+          //...
+          let SocialValue = event.target.id;
+
+          if (!socialLinks.includes(SocialValue)) {
+              socialLinks.push(event.target.id);
+          } if (event.target.value < 1){
+            let carIndex = socialLinks.indexOf(SocialValue); //get  "car" index
+            socialLinks.splice(carIndex, 1);
+          }
+
+          validateSubmitButton();
+
+          if (socialLinks.length === 0) {
+            socialErrors.appendChild(emailErrorMessage);
+          }
+          if (socialLinks.length > 0) {
+            if(socialErrors.childNodes.length === 2){
+              socialErrors.removeChild(emailErrorMessage);
+            }
+          }
+        });
       }
     };
 
@@ -61,7 +93,7 @@ export default {
             category.splice(carIndex, 1);
           }
 
-          validateFunction();
+          validateSubmitButton();
 
           if (category.length === 1) {
             categoryErrorDiv.style.display = 'none';
@@ -74,33 +106,45 @@ export default {
       }
     };
 
-    const validateFunction = () => {
-      const submitButton = document.querySelector('.acf-form-submit button');
-      const XHR = new XMLHttpRequest();
-      submitButton.addEventListener('click', (e) => {
-        XHR.setRequestHeader('X-WP-Nonce', 'universityData.nonce')
-        if (category.length === 0) {
-          categoryErrorDiv.style.display = 'block';
-          e.preventDefault();
-        }
+    const validateSubmitButton = () => {
+      if (submitButton) {
+        submitButton.addEventListener('click', (e) => {
 
-        if (imageInputUploader.value == false) {
-          imageErrorDiv.style.display = 'block';
-          imageErrorDiv.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'nearest',
-          });
-          e.preventDefault();
-        }
-      });
+          if (socialLinks.length === 0) {
+            socialErrors.appendChild(emailErrorMessage);
+            socialErrors.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center',
+              inline: 'nearest',
+            });
+            e.preventDefault();
+          }
+
+          if (category.length === 0) {
+            categoryErrorDiv.style.display = 'block';
+            e.preventDefault();
+          }
+
+          if (imageInputUploader.value == false) {
+            imageErrorDiv.style.display = 'block';
+            imageErrorDiv.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center',
+              inline: 'nearest',
+            });
+            e.preventDefault();
+          }
+        });
+      }
+
     };
 
     const validateImageUploader = () => {
-      const imageUploader = document.getElementById('acf-field_5e5269641b12b');
-      imageUploader.addEventListener('click', () => {
-        imageErrorDiv.style.display = 'none';
-      });
+      if (imageUploader) {
+        imageUploader.addEventListener('click', () => {
+          imageErrorDiv.style.display = 'none';
+        });
+      }
     };
 
     // init on load
@@ -109,7 +153,9 @@ export default {
     loadSocialMediaOnLoad();
     loadCategoryOnLoad();
     validateImageUploader();
-    validateFunction();
+    validateSubmitButton();
     validateCategories();
+    RegisterForm();
+    trimInput();
   },
 };

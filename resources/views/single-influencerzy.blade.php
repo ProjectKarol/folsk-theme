@@ -162,7 +162,7 @@
                $twitter = get_field('twitter');
                $linktwitter = $twitter['twitter-acf'];
                @endphp
-               @if ($linktwitte))
+               @if ($linktwitter)
                    <a class="icon twitter" href="{{$linktwitter}}" title="Twitter">
                      <div class="ir">
                       <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">

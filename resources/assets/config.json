@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/folks",
-  "devUrl": "https://folks.loc",
+  "devUrl": "https://folks.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

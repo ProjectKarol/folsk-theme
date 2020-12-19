@@ -60,7 +60,7 @@
 // Javascript to enable link to tab
 var url = document.location.toString();
 
-
+console.log('test')
 function eventFire(el, etype){
   if (el.fireEvent) {
     el.fireEvent('on' + etype);
