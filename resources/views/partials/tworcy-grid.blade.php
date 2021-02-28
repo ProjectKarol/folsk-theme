@@ -1,31 +1,35 @@
-{{--
-  Template Name: Riodzaj taksonomy
---}}
-
-
-@extends('layouts.app')
-
-@section('content')
-  @include('partials.page-header')
   <div class="tworc-page">
     <div class="container">
-    <h1 >{{single_cat_title('Obecnie przeglądasz: ')}}</h1>
+      <h1 >Twórcy</h1>
       <div class="row">
 
-@if (have_posts())
 
-@while (have_posts())
-{{the_post()}}
-@php
-   if ( get_query_var('paged') ) {
-        $paged = get_query_var('paged');
-        } else if ( get_query_var('page') ) {
-        $paged = get_query_var('page');
-        } else {
-        $paged = 1;
-    }
+          @php
+
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          // WP_User_Query arguments
+          $args = array (
+            'post_type'              => array( 'influencerzy' ),
+            'post_status'            => array( 'publish' ),
+            // 'nopaging'               => true,
+            'order'                  => 'ASC',
+            'orderby'                => 'menu_order',
+            'posts_per_page' => 12, // post per page
+            'paged' => $paged,
+          );
+
+
+
+// The Query
+$services = new WP_Query( $args );
+
 
 @endphp
+
+@if ($services->have_posts())
+
+@while ($services->have_posts())
+{{$services->the_post()}}
 <div class="col-sm-12 col-md-6 col-lg-4" >
   <a href="{{get_permalink()}}">
 
@@ -85,8 +89,25 @@ $terms = wp_get_post_terms($post->ID, 'rodzaj'); @endphp
   </a>
 </div> <!-- col-sm-4-->
 @endwhile
+<div class="pagination-tworcy">
+@php
+  $total_pages = $services->max_num_pages;
 
+if ($total_pages > 1){
 
+    $current_page = max(1, get_query_var('paged'));
+
+    echo paginate_links(array(
+        'base' => get_pagenum_link(1) . '%_%',
+        'format' => '/page/%#%',
+        'current' => $current_page,
+        'total' => $total_pages,
+        'prev_text'    => __('« Poprzednia'),
+        'next_text'    => __('Następna »'),
+    ));
+}
+@endphp
+</div>
 @else
 
 @endif
@@ -96,13 +117,5 @@ $terms = wp_get_post_terms($post->ID, 'rodzaj'); @endphp
 
 
       </div> <!-- row-->
-      <div class="pagination-tworcy-kategorie">
-        {!!     the_posts_pagination( array(
-          'prev_text'          => __( '« Poprzednia', 'cm' ),
-          'next_text'          => __( 'Następna »', 'cm' ),
-          'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Strona', 'cm' ) . ' </span>',
-      ) ); !!}
-        </div>
     </div>  <!-- container -->
   </div> <!-- tworc-page -->
-@endsection

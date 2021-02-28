@@ -7,6 +7,50 @@
     padding-top: 100px;
   }
 
+
+  .gfield_required {
+    display: none;
+  }
+   // formularz kontaktowy
+
+ .gfield_label {
+  color: #7d8192;
+}
+#gform_fields_3 input,
+#gform_fields_3 textarea {
+  border-radius: 15px;
+
+  border: solid 1px #b0c5d4;
+  box-shadow: $shadow;
+  padding: 10px;
+}
+
+#gform_submit_button_3 {
+  margin: 0 auto;
+  display: flex;
+  min-width: 200px;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 10px;
+  justify-content: center;
+  border: solid 2px $theme-orange;
+  border-radius: 15px;
+  color: $theme-orange;
+  transition: all 0.4s ease 0s;
+  box-shadow: $shadow;
+
+  &:hover {
+    letter-spacing: 1px;
+    box-shadow: $shadow;
+    transition: all 0.4s ease 0s;
+    min-width: 210px;
+    background-color: $theme-orange;
+    color: white;
+  }
+}
+
+
+
   p {
     text-align: center;
   }
@@ -200,6 +244,10 @@
   }
   .acf-field-5e38726a0b59a > div > div > i:before {
     content: url('../images/icons/linkedin.png');
+  }
+  .acf-field-5ff78352a7b0e > div > div > i:before {
+    content: url('../images/icons/tiktok-round-line-color30.png');
+    max-width: 30px;
   }
 
   // kategorie twórczości
@@ -611,6 +659,9 @@
       width: 100% !important;
     }
   }
+
+
+
 
   .zarejestruj-sie #gform_submit_button_4 {
     display: inline-block;

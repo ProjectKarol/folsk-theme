@@ -16,7 +16,7 @@
           <div class="col-md-6">
           <h1 data-aos="zoom-in">CREATORS <br> <span style="color:white;">that influence</span></h1>
 
-          <p data-aos="zoom-in">Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+          <p data-aos="zoom-in">Folks to agencja influencer marketingu. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
             </p>
           </div>
           <div class="col-md-6">
@@ -35,7 +35,7 @@
       <div class="col-md-6">
       <h1 data-aos="zoom-in">CREATORS <br> <span style="color:white;">that influence</span></h1>
 
-      <p data-aos="zoom-in">Folks to agencja influencer marketingu na polskim rynku. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
+      <p data-aos="zoom-in">Folks to agencja influencer marketingu. Nasze działania są skierowane do twórców – zarówno makro i mikroinfluencerów, jak i do klientów poszukujących skutecznego sposobu komunikacji.
         </p>
       </div>
       <div class="col-md-6">
@@ -54,7 +54,7 @@
       <img
       src=" {{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box1.png"
       alt="Komputer"/>
-    <p >Znajdziemy dla Ciebie najlepszych Twórców i spełniających Twoje biznesowe i wizerunkowe oczekiwania.</p>
+    <p >Znajdziemy dla Ciebie najlepszych wórców spełniających Twoje biznesowe i wizerunkowe oczekiwania.</p>
     </div>
     <div class="intro col-md-4 col-md-offset-2" data-aos="zoom-in"><h3>Pomysł</h3>
       <img
@@ -66,7 +66,7 @@
       <img
       src="{{get_stylesheet_directory_uri()}}/assets/images/new/strona-glowna-box3.png"
       alt="Komputer"/>
-      <p>Do zadań podchodzimy kompleksowo - zdejmujemy ciężar realizacji. </p>
+      <p>Do zadań podchodzimy kompleksowo - od stworzenia strategii, ustaleń z twórcami aż po raportowanie. </p>
     </div>
   </div>
 

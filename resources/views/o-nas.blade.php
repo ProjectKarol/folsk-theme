@@ -19,8 +19,7 @@
       <div class="row align-items-center">
             <div class="col-sm-8 znajdz-toworce-opis">
 
-              <p style=" font-size:18px;" data-aos="zoom-in"> Folks łączy Twórców, którzy swoją pasję, wiedzę, pracę i styl życia zdobyli uznanie społeczności internetowej. Twórcy za pośrednictwem  kanałów w social mediach takich jak: Instagram, Facebook, Twitter, TikTok, YouTube czy własna strona www –
-                nieustannie dzielą się swoim życiem  prywatnym i zawodowym, inspirując innych do poznawania świata, rozwoju osobistego i podejmowania wyzwań. </p>
+              <p style=" font-size:18px;" data-aos="zoom-in"> Folks łączy Twórców, którzy poprzez swoją pasję, wiedzę, pracę i styl życia zdobyli uznanie i zaufanie społeczności internetowej. Twórcy za pośrednictwem kanałów w social mediach, takich jak: Instagram, Facebook, Twitter, TikTok, YouTube czy własna strona www – nieustannie dzielą się swoim życiem prywatnym i zawodowym, inspirując innych do poznawania świata, rozwoju osobistego i podejmowania wyzwań.</p>
                 </div>
                 <div class="col-sm-4">
               <img
@@ -36,7 +35,7 @@
             </div>
             <div class="col-sm-8 znajdz-toworce-opis">
 
-              <p style=" font-size:18px;" data-aos="zoom-in"> Nie bez powodu osoby reprezentowane przez Folks nazywane są Twórcami. Dbają o tworzenie treści, które nieustannie budują ich kapitał społeczny i autorytet wśród obserwujących i słuchaczy. To wszystko sprawia, że stają się osobami wpływającymi na zachowanie swoich odbiorców. Folks to ludzie kreatywni, pełni pasji – definiowani nie przez swoją użyteczność marketingową, ale poprzez unikatowe treści z którymi identyfikują się ich widzowie. </p>
+              <p style=" font-size:18px;" data-aos="zoom-in"> Nie bez powodu osoby reprezentowane przez Folks nazywane są Twórcami. Dbają oni o tworzenie treści, które nieustannie budują ich kapitał społeczny i autorytet wśród obserwujących i słuchaczy. To wszystko sprawia, że stają się osobami wpływającymi na zachowania swoich odbiorców. Folks to ludzie kreatywni, pełni pasji – definiowani nie przez swoją użyteczność marketingową, ale poprzez unikatowe treści, z którymi identyfikują się ich widzowie. </p>
                 </div>
 
 
@@ -44,7 +43,7 @@
 
                 <div class="col-sm-8 znajdz-toworce-opis">
 
-                  <p style=" font-size:18px;" data-aos="zoom-in"> Folks stoi na straży przemyślanej selekcji Twórców, dbając o to by właściwie odzwierciedlali tożsamość marki Klienta i spełniali oczekiwania grupy docelowej. Zadaniem platformy Folks jest współtworzenie efektywnej biznesowo komunikacji i kampanii w mediach społecznościowych poprzez właściwą koordynację działań prowadzonych z Twórcami. </p>
+                  <p style=" font-size:18px;" data-aos="zoom-in"> Folks stoi na straży przemyślanej selekcji Twórców, dbając o to, by właściwie odzwierciedlali tożsamość marki Klienta i spełniali oczekiwania grupy docelowej.  Zadaniem platformy  Folks jest współtworzenie efektywnej biznesowo komunikacji i kampanii w mediach społecznościowych poprzez właściwą koordynację działań prowadzonych z Twórcami. </p>
                     </div>
                     <div class="col-sm-4">
                   <img

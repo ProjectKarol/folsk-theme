@@ -17,8 +17,9 @@
     <div class="row">
       <div class="col-md-6 jak-dzialamy-intro">
         <h1 data-aos="zoom-in">Jak <span>działamy</span></h1>
-        <p data-aos="zoom-in">Folsk stawia na bezpośrednie relacje z Twórcami działającymi w Internecie. Każda osoba, przynależąca do Folks jest odpowiednio weryfikowana - nie tylko pod kątem generowanych zasięgów , ale również prowadzonej
-          komunikacji, spójności z marką i jej wartościami.
+        <p data-aos="zoom-in">Folks stawia na bezpośrednie relacje z Twórcami działającymi w Internecie.
+          Każda osoba, przynależąca do Folks jest odpowiednio weryfikowana  - nie tylko pod
+          kątem generowanych zasięgów, ale również prowadzonej komunikacji, spójności z marką i jej wartościami.
         </p>
         <img
         class="corner-image-mobile d-block d-lg-none"
@@ -40,9 +41,9 @@
         </div>
         <div class="col-sm-8 znajdz-toworce-opis">
           <h3 data-aos="zoom-in"><span>1.</span> Identyfikacja potrzeb Klienta</h3>
-      <p style=" font-size:18px;" data-aos="zoom-in"> W pierwszym etapie działań ustalane są główne cele biznesowo - wizerunkowe Klienta, których realizacja jest możliwa dzięki wsparciu wpływowych Twórców. Określane są potrzeby i możliwości
-        Klienta, weryfikowana i udoskonalana jest oferta, jaką Klient kieruje do Twórców. Etap pierwszy kończy się przygotowaniem rekomendacji wyselekcjonowanych profili osób Klientów i jednoczesnej prezentacji benefitów
-        współpracy  obydwu zainteresowanym stronom. </p>
+      <p style=" font-size:18px;" data-aos="zoom-in">W pierwszym etapie działań ustalane są główne cele biznesowo – wizerunkowe Klienta, których realizacja
+        jest możliwa dzięki wsparciu wpływowych Twórców. Określane są potrzeby i możliwości Klienta, weryfikowana i udoskonalana jest oferta,
+        jaką Klient kieruje do Twórców. Etap pierwszy kończy się przygotowaniem rekomendacji wyselekcjonowanych profili osób Klientowi i jednoczesnej prezentacji benefitów współpracy obydwu zainteresowanym stronom.</p>
         <img
         src=" {{get_stylesheet_directory_uri()}}/assets/images/jak-dzialamy-kierunek.jpg"
         alt="kierunek" data-aos="zoom-in"/>
@@ -50,8 +51,7 @@
 
         <div class="col-sm-8 znajdz-toworce-opis">
           <h3 data-aos="zoom-in"><span>2.</span> Selekcja Twórców</h3>
-      <p style=" font-size:18px;" data-aos="zoom-in"> Identyfikacja Twórców i potwierdzenie zainteresowania współpracą z Klientem – to kluczowy etap działań prowadzonych w Folks. Twórcy otrzymują informacje uzupełniające poznają składowe planowanej kampanii, przedstawiają swoje warunki, w tym również dostępność czasową i oczekiwania wobec projektu.
-         W ramach etapu drugiego – Klient uzyskuje potwierdzoną listę Twórców chcących uczestniczyć we wspólnej kampanii – celem finalnej weryfikacji i akceptacji.
+      <p style=" font-size:18px;" data-aos="zoom-in">Identyfikacja Twórców i potwierdzenie zainteresowania współpracą z Klientem – to kluczowy etap działań prowadzonych w Folks. Twórcy otrzymują informacje uzupełniające, poznają składowe planowanej kampanii, przedstawiają swoje warunki, w tym również dostępność czasową i oczekiwania wobec projektu. W ramach etapu drugiego – Klient uzyskuje potwierdzoną listę Twórców chcących uczestniczyć we wspólnej kampanii – celem finalnej weryfikacji i akceptacji.
       </p>
       <img
       src=" {{get_stylesheet_directory_uri()}}/assets/images/jak-dzialamy-kierunek-right.jpg" style="margin-left:40%;"
@@ -70,8 +70,7 @@
         </div>
         <div class="col-sm-8 znajdz-toworce-opis">
           <h3 data-aos="zoom-in"><span>3.</span> Kontakt i negocjacje</h3>
-      <p style=" font-size:18px;" data-aos="zoom-in"> Po potwierdzeniu listy Twórców – Folks finalizuje ustalenia, negocjuje warunki umów, potwierdza ustalenia i założenia projektowe.
-        Na tym etapie w przypadku rezygnacji ze współpracy po stronie Twórcy. Klient otrzymuje rekomendację kolejnej osoby pasującej do kampanii.
+      <p style=" font-size:18px;" data-aos="zoom-in"> Po potwierdzeniu listy i liczby Twórców – Folks finalizuje ustalenia, negocjuje warunki umów, potwierdza ustalenia i założenia projektowe. Na tym etapie w przypadku rezygnacji ze współpracy po stronie Twórcy, Klient otrzymuje rekomendację kolejnej osoby pasującej do kampanii.
       </p>
 
       <img
@@ -81,7 +80,7 @@
 
         <div class="col-sm-8 znajdz-toworce-opis">
           <h3 data-aos="zoom-in"><span>4.</span> Monitorowanie i opieka</h3>
-      <p style=" font-size:18px;"> Uruchomienie kampanii, pomiar jej efektów, stały kontakt z Klientem i Twórcami -to wszystko Folks podsumowuje w ramach sumarycznego raportu, dbając o jak najdokładniejszą analitykę kampanii.
+      <p style=" font-size:18px;"> Uruchomienie kampanii, pomiar jej efektów, stały kontakt z Klientem i Twórcami – to wszystko Folks podsumowuje w ramach sumarycznego raportu, dbając o jak najdokładniejszą analitykę kampanii.
       </p>
         </div>
 

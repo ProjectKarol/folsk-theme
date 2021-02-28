@@ -24,7 +24,9 @@
     <div class="container">
       <div class="row">
           <div class="col-md-6 mobilie-justyfy">
-            <span>&copy; 2019 – <?php echo date('Y'); ?> Folks. All Right Reserved.</span>
+            <span>&copy; 2019 – <?php echo date('Y'); ?> Folks. All Right Reserved. | <a href="https://folks.pl/regulamin-platformy-internetowej-folks/">Regulamin</a>
+            | <a href="https://folks.pl/klauzula-informacyjna-rodo/">Polityka prywatności</a> |
+            </span>
           </div>
           <div class="col-md-6 fols-part mobilie-justyfy">
             <span>Folks is a part of a
