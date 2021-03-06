@@ -253,9 +253,20 @@ if ( $user_ID != 1 ) {
     #gf_form_toolbar {
         display: none !important;
     }
-    #wp-admin-bar-updates {
+    #wp-admin-bar-updates, #woo_slg_license-activation-notice {
         display: none !important;
     }
   </style>';
 }
 }
+
+
+
+function my_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+    $wp_admin_bar->remove_node( 'new-post' );
+    $wp_admin_bar->remove_node( 'new-media' );
+    $wp_admin_bar->remove_node( 'new-page' );
+}
+add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );

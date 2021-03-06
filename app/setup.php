@@ -156,6 +156,29 @@ show_admin_bar(false);
 } );
 
 
+// clen up dashboard for redactors
+add_action('init', function () {
+if (current_user_can('editor') ) {
+show_admin_bar(true);
+add_action( 'admin_init', function (){
+remove_menu_page('upload.php'); // Media
+remove_menu_page('edit-comments.php'); // Comments
+remove_menu_page('edit.php?post_type=page'); // Pages
+remove_menu_page('edit.php?'); // Pages
+remove_menu_page( 'edit.php' ); // Posts
+remove_menu_page( 'profile.php' ); // Posts
+remove_menu_page( 'index.php' ); // Posts
+
+// redirect to influencer edit :
+add_action('load-index.php', function (){
+wp_redirect( admin_url( 'edit.php?post_type=influencerzy' ) );
+});
+} );
+
+}
+} );
+
+
 // add column to user profile
 
 
